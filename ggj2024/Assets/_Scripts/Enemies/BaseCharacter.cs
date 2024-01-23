@@ -5,7 +5,7 @@ using Unity.PlasticSCM.Editor.WebApi;
 using UnityEngine;
 using UnityEngine.Playables;
 
-public class BaseEnemy : MonoBehaviour, IDamageable
+public class BaseCharacter : MonoBehaviour, IDamageable
 {
     public Material BaseMaterial => _baseMaterial;
 
@@ -41,11 +41,6 @@ public class BaseEnemy : MonoBehaviour, IDamageable
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Backspace))
-        {
-            TakeDamage(1);
-        }
-
         if (_resetMaterialTimer > 0)
         {
             _resetMaterialTimer -= Time.deltaTime;
