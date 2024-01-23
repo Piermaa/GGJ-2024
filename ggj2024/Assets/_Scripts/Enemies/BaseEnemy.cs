@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Transactions;
 using Unity.PlasticSCM.Editor.WebApi;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class BaseEnemy : MonoBehaviour, IDamageable
 {
@@ -22,6 +23,7 @@ public class BaseEnemy : MonoBehaviour, IDamageable
     [SerializeField] private Material _flashingWhiteMaterial;
     [SerializeField] private AudioClip takingDamageSound;
     [SerializeField] private float resetMaterialTime;
+    [SerializeField] private DamageNotification _damageNotification;
 
     [SerializeField] private int _maxHealth;
     private int _currentHealth;
@@ -60,6 +62,7 @@ public class BaseEnemy : MonoBehaviour, IDamageable
         _currentHealth -= damage;
         _characterSprite.material= _flashingWhiteMaterial;
         _resetMaterialTimer = resetMaterialTime;
+        _damageNotification.BeginDamageNotification(damage);
 
         if (_currentHealth < 0) 
         {
