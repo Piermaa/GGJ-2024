@@ -379,6 +379,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 615745576618141132, guid: eb0f7f4d1139d23499b8d3c5a43f6389, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3197757398304113789, guid: eb0f7f4d1139d23499b8d3c5a43f6389, type: 3}
       propertyPath: _playerTransform
       value: 
