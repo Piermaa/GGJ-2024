@@ -3,7 +3,10 @@ guid: 0c93be1d81cd03644a5431e6417fb88a
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - _characterSprite: {instanceID: 0}
+  - _flashingWhiteMaterial: {fileID: 2100000, guid: da96aa490a6293645b534b7ec16841e5, type: 2}
+  - _baseMaterial: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

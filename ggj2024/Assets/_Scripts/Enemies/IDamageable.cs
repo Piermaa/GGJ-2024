@@ -4,10 +4,12 @@ using UnityEngine;
 
 public interface IDamageable
 {
+    int CurrentHealth { get; }
+    int MaxHealth { get; }
     Material BaseMaterial { get; }
     Material FlashingWhiteMaterial { get;}
     SpriteRenderer CharacterSprite { get;}
-    void TakeDamage();
+    AudioClip TakingDamageSound { get;}
+    void TakeDamage(int damage);
     void Death();
-
 }
