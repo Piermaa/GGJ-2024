@@ -1,10 +1,9 @@
 fileFormatVersion: 2
-guid: 2a685256a577fc04ca97444f65ffc288
+guid: ab3cc9c155dc4d54e843002f90ffdf3f
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - nukeDrop: {fileID: 6144451814148777567, guid: e4bf1ee1d61caed4da599579b2654dd9, type: 3}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
