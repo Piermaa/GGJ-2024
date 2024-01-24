@@ -1,0 +1,230 @@
+fileFormatVersion: 2
+guid: 0f52b38b8f4f1544d94ef230a70286d5
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 278
+        width: 54
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f32f7abd481117745928df81e4494fc6
+      internalID: 195742984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_0: 195742984
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_1: -1276334341
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_10: 2016078405
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_11: -1470206700
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_12: 1602481329
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_13: 947103176
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_14: 1776029351
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_15: 703176688
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_16: 904023673
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_17: 1321373891
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_18: -1128868320
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_19: 461230051
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_2: 857729019
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_20: 471209041
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_21: -1137872511
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_22: 767442780
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_23: 738331421
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_24: 124108341
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_25: 141013862
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_26: 1598788831
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_27: 290728894
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_28: 1518095676
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_29: -1265154497
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_3: -133209993
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_30: -1088547135
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_31: -901577067
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_32: 603945625
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_33: 1114236202
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_34: 976297148
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_35: 1573566304
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_36: -1743104032
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_37: 409530029
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_38: -1230788406
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_39: 1592445731
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_4: 501083789
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_40: 1628488811
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_41: -329694318
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_42: 553662617
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_43: -1275298617
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_44: 1236606056
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_45: 1722219144
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_46: 818146336
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_47: 703736935
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_48: 251718167
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_49: 789686012
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_5: 1083595310
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_50: -1995546465
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_51: 1319109144
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_52: -1065833983
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_53: 176302317
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_54: -416553042
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_55: -1336157588
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_56: 2066418058
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_57: 752511460
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_58: 441983536
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_59: 948925226
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_6: -1650599726
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_60: 1341801581
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_61: 1208576730
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_62: 602032472
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_63: -514009763
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_64: -360955472
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_65: -1869900320
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_66: -1934482242
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_67: -191710044
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_68: 1780198987
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_7: 1709548741
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_8: -1901823596
+      PC Computer - Hotline Miami 2 Wrong Number - Prison Boss_9: 1197965337
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
