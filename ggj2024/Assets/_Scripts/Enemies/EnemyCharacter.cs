@@ -13,4 +13,9 @@ public class EnemyCharacter : BaseCharacter
         base.Awake();
         _currentHealth = stats.MaxHealth;
     }
+
+    private void OnDestroy()
+    {
+        EnemyManager.Instance.RemoveEnemy(this);
+    }
 }
