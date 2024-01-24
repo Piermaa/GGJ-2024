@@ -7,7 +7,8 @@ public class NukePickupable : Pickupable
     [SerializeField] private GameObject _nukePrefab;
     protected override void Trigger(GameObject playerObject)
     {
-        Instantiate(_nukePrefab);
+        var nuke = Instantiate(_nukePrefab, playerObject.transform);
+        nuke.transform.localPosition = Vector3.zero;
         base.Trigger(playerObject);
     }
 }

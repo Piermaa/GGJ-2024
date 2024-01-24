@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
 {
-    [SerializeField] private int nukeDropRatio;
+    [SerializeField] [Range(0,100)] private int nukeDropRatio;
     [SerializeField] private GameObject nukeDrop;
     public static EnemyManager Instance;
     

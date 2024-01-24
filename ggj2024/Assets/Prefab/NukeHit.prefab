@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2874362045180337021}
   - component: {fileID: 290298905257398385}
   m_Layer: 0
-  m_Name: PlaneCrashGif
+  m_Name: NukeHit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
