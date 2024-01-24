@@ -9,7 +9,8 @@ public class EnemyDamage : MonoBehaviour
     {
         if (collision.transform.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<IDamageable>().TakeDamage(_damage);
+            collision.gameObject.TryGetComponent<IDamageable>(out var damageable); 
+            damageable.TakeDamage(_damage);
         }  
     }
 }
