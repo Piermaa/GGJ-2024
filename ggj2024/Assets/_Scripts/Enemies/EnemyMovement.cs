@@ -2,15 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMovement : MonoBehaviour
+public class EnemyMovement : EnemyBehaviour
 {
-    [SerializeField] private float _movementSpeed;
     [SerializeField] private Transform _playerTransform;
-
 
     private void FixedUpdate()
     {
-        Vector2 dir= _playerTransform.position - transform.position;
-        transform.Translate(dir * _movementSpeed * Time.fixedDeltaTime);
+        Vector2 dir= (_playerTransform.position - transform.position).normalized;
+        transform.Translate(dir * enemyStats.MovementSpeed * Time.fixedDeltaTime);
+    }
+
+    public void SetPlayer(Transform playerTransform)
+    { 
+        _playerTransform = playerTransform;
     }
 }

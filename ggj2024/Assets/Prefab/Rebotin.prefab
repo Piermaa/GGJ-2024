@@ -4930,7 +4930,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
-  damage: 1
+  damage: 50
   maxBounces: 4
   _moveDirection: {x: 0.9121195, y: -0.40992433}
 --- !u!61 &6537448687649382115

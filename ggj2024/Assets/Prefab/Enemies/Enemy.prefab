@@ -93,7 +93,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8754542712651852450}
-  - component: {fileID: 7191447660728229469}
+  - component: {fileID: 9082633803451846621}
   - component: {fileID: 3197757398304113789}
   - component: {fileID: 4733498645256165997}
   - component: {fileID: 7402641333707489044}
@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: 3934838351289014308}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -123,7 +123,7 @@ Transform:
   - {fileID: 6061264813250371521}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7191447660728229469
+--- !u!114 &9082633803451846621
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -132,15 +132,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 8923559383968321671}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c93be1d81cd03644a5431e6417fb88a, type: 3}
+  m_Script: {fileID: 11500000, guid: 2008fc38e554b7c4ba47eaba6591c61f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _characterSprite: {fileID: 608370693238864572}
   _flashingWhiteMaterial: {fileID: 2100000, guid: da96aa490a6293645b534b7ec16841e5, type: 2}
   takingDamageSound: {fileID: 0}
-  resetMaterialTime: 0.1
   _damageNotification: {fileID: 5056466103016932401}
-  _maxHealth: 5
+  resetMaterialTime: 0.1
+  stats: {fileID: 11400000, guid: 806aa300041e35c49b1e401c2dfe88cb, type: 2}
 --- !u!114 &3197757398304113789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -153,7 +153,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03f5afb317bd96d4990bd69a5334b19d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _movementSpeed: 1
   _playerTransform: {fileID: 0}
 --- !u!50 &4733498645256165997
 Rigidbody2D:
@@ -214,7 +213,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.011035681, y: 0.0055179596}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -225,7 +224,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.7657104, y: 2.1587477}
   m_EdgeRadius: 0
 --- !u!114 &3230815108292430350
 MonoBehaviour:
@@ -239,7 +238,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abcfe1030abf3e14e91ab9508222dd16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 1
 --- !u!95 &3934838351289014308
 Animator:
   serializedVersion: 5
