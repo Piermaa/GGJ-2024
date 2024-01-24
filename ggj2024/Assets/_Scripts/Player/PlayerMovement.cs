@@ -23,6 +23,11 @@ public class PlayerMovement : MonoBehaviour
         ver = Input.GetAxis("Vertical");
         
         rb.velocity = new Vector2 (hor, ver) * speed;
+
+        if (hor < 0)
+            transform.rotation = Quaternion.Euler(new Vector3(0, 0, 180));
+        else if(hor > 0)
+            transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
     }
 
     // Update is called once per frame
@@ -30,4 +35,5 @@ public class PlayerMovement : MonoBehaviour
     {
         
     }
+    
 }
