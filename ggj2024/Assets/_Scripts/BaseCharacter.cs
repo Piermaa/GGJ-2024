@@ -15,26 +15,23 @@ public class BaseCharacter : MonoBehaviour, IDamageable
 
     public int CurrentHealth => _currentHealth;
 
-    public int MaxHealth => _maxHealth;
-
     public AudioClip TakingDamageSound => takingDamageSound;
 
     [SerializeField] private SpriteRenderer _characterSprite;
     [SerializeField] private Material _flashingWhiteMaterial;
     [SerializeField] private AudioClip takingDamageSound;
-    [SerializeField] private float resetMaterialTime;
     [SerializeField] private DamageNotification _damageNotification;
 
-    [SerializeField] private int _maxHealth;
-    private int _currentHealth;
+    [SerializeField] private float resetMaterialTime;
+
+    protected int _currentHealth=100;
 
     private Material _baseMaterial;
     private float _resetMaterialTimer;
 
-    private void Awake()
+    protected virtual void Awake()
     {
         _baseMaterial = _characterSprite.material;
-        _currentHealth = _maxHealth;
     }
 
 

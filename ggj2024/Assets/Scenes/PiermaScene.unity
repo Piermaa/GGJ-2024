@@ -409,22 +409,6 @@ PrefabInstance:
       propertyPath: _playerTransform
       value: 
       objectReference: {fileID: 1430152964}
-    - target: {fileID: 7402641333707489044, guid: eb0f7f4d1139d23499b8d3c5a43f6389, type: 3}
-      propertyPath: m_Size.x
-      value: 2.7657104
-      objectReference: {fileID: 0}
-    - target: {fileID: 7402641333707489044, guid: eb0f7f4d1139d23499b8d3c5a43f6389, type: 3}
-      propertyPath: m_Size.y
-      value: 2.1587477
-      objectReference: {fileID: 0}
-    - target: {fileID: 7402641333707489044, guid: eb0f7f4d1139d23499b8d3c5a43f6389, type: 3}
-      propertyPath: m_Offset.x
-      value: 0.011035681
-      objectReference: {fileID: 0}
-    - target: {fileID: 7402641333707489044, guid: eb0f7f4d1139d23499b8d3c5a43f6389, type: 3}
-      propertyPath: m_Offset.y
-      value: 0.0055179596
-      objectReference: {fileID: 0}
     - target: {fileID: 8754542712651852450, guid: eb0f7f4d1139d23499b8d3c5a43f6389, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -471,11 +455,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8923559383968321671, guid: eb0f7f4d1139d23499b8d3c5a43f6389, type: 3}
       propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8923559383968321671, guid: eb0f7f4d1139d23499b8d3c5a43f6389, type: 3}
-      propertyPath: m_TagString
-      value: Enemy
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
