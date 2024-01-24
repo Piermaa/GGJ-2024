@@ -6,6 +6,7 @@ public class PlayerMeleeAttack : MonoBehaviour
 {
     [SerializeField] int damage;
     [SerializeField] float attackDistance;
+    [SerializeField] float enemyDistance;
 
     private BaseCharacter nearEnemy;
     
@@ -13,6 +14,7 @@ public class PlayerMeleeAttack : MonoBehaviour
 
     private float attackCooldown;
 
+    private List<GameObject> enemyList;
 
 
     // Start is called before the first frame update
@@ -26,18 +28,36 @@ public class PlayerMeleeAttack : MonoBehaviour
     {
         if(nearEnemy != null)
         {
-            StartAttacking();
+            StartAttacking(CloserEnemy());
         }
     }
 
-    private void EnemyPlayerDistance()
+    private GameObject CloserEnemy()
     {
+        float aux2distance = 0;
+        float auxDistance = 0;
 
+        GameObject closerEnemy = null;
+
+        for(int i = 0; i < enemyList.Count; i++)
+        {
+            aux2distance = Vector2.Distance(enemyList[i].transform.position, transform.position);
+
+            if (aux2distance < enemyDistance && aux2distance < auxDistance)
+            {
+                auxDistance = aux2distance;
+                closerEnemy = enemyList[i];
+            }
+        }
+
+        return closerEnemy;
     }
 
-    private void StartAttacking()
+    private void StartAttacking(GameObject enemy)
     {
-        if(attackCooldown <= 0)
+        nearEnemy = enemy.GetComponent<BaseCharacter>();
+
+        if (attackCooldown <= 0)
         {
             attackCooldown = 1f;
             nearEnemy.TakeDamage(damage);
@@ -50,7 +70,18 @@ public class PlayerMeleeAttack : MonoBehaviour
     {
         if (collision.gameObject.layer == 6)
         {
-            nearEnemy = collision.gameObject.GetComponent<BaseCharacter>();
+            enemyList.Add(collision.gameObject.GetComponent<GameObject>());
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawSphere(transform.position, enemyDistance);
+        for (int i = 0; i < enemyList.Count; i++)
+        {
+            Gizmos.DrawLine(enemyList[i].transform.position, transform.position);
+        }
+        
     }
 }

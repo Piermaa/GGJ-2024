@@ -334,7 +334,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  attackDistance: 0
+  attackDistance: 5
+  enemyDistance: 0
 --- !u!70 &1581782488
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
