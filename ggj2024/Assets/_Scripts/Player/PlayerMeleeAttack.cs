@@ -10,16 +10,19 @@ public class PlayerMeleeAttack : MonoBehaviour
     [SerializeField] EnemyList enemyListRef;
 
     private BaseCharacter nearEnemy;
-    
+
     private bool alreadyAttacking = false;
 
     private float attackCooldown;
+
+    private Animator anim;
 
 
     // Start is called before the first frame update
     void Start()
     {
         attackCooldown = 0;
+        anim = GetComponentInParent<Animator>();
     }
 
     // Update is called once per frame
@@ -40,13 +43,17 @@ public class PlayerMeleeAttack : MonoBehaviour
 
         for(int i = 0; i < enemyListRef.enemyList.Count; i++)
         {
-            aux2distance = Vector2.Distance(enemyListRef.enemyList[i].transform.position, transform.position);
-
-            if (aux2distance < auxDistance)
+            if(enemyListRef.enemyList.Count > 0)
             {
-                auxDistance = aux2distance;
-                closerEnemy = enemyListRef.enemyList[i];
+                aux2distance = Vector2.Distance(enemyListRef.enemyList[i].transform.position, transform.position);
+
+                if (aux2distance < auxDistance)
+                {
+                    auxDistance = aux2distance;
+                    closerEnemy = enemyListRef.enemyList[i];
+                }
             }
+            
         }
 
         return closerEnemy;
@@ -67,6 +74,7 @@ public class PlayerMeleeAttack : MonoBehaviour
         if (attackCooldown <= 0 && alreadyAttacking)
         {
             attackCooldown = 1f;
+            anim.SetTrigger("Attack");
             Attack(nearEnemy);
         }
         else

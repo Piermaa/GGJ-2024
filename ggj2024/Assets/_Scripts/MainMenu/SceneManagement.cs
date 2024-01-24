@@ -5,6 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class SceneManagement : MonoBehaviour
 {
+    public static SceneManagement Instance;
+
+    private void Awake()
+    {
+        if (Instance == null)
+            Instance = this;
+        else 
+            Destroy(this);
+    }
+
     public void LoadScene(int index)
     {
         SceneManager.LoadScene(index);
