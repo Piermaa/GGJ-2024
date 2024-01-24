@@ -1,5 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public interface IProjectile
@@ -7,4 +7,5 @@ public interface IProjectile
     void Shoot(Vector2 shootDirection);
 
     void Hit(Collider2D collision);
+
 }

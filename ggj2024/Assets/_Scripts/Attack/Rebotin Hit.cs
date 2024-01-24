@@ -1,32 +1,26 @@
 using UnityEngine;
+using System;
 
 public class RebotinHit : MonoBehaviour, IProjectile
 {
+    public Action OnBounce;
+
+    public static event Action OnDestroyBullet;
+
     [SerializeField] private float moveSpeed;
-    [SerializeField] private Vector2 _moveDirection;
     [SerializeField] private int damage;
-    [SerializeField] private float lifeTime;
-    private float _height;
+    [SerializeField] private int maxBounces;
+    [SerializeField] private Vector2 _moveDirection;
+
+    private int _bouncesCounter;
 
     private void Awake()
     {
-        _height = GetComponent<Collider2D>().bounds.extents.y;
-    }
-    public void Shoot(Vector2 moveDir)
-    {
-        _moveDirection = moveDir;
+        OnBounce += Bounce;
     }
 
     private void FixedUpdate()
     {
-        lifeTime -= Time.deltaTime;
-
-        if(lifeTime<0)
-        {
-            Destroy(gameObject);
-        }
-
-
         transform.Translate(_moveDirection * moveSpeed * Time.fixedDeltaTime);
 
         Vector2 screenPos = Camera.main.WorldToScreenPoint(transform.position); 
@@ -34,11 +28,17 @@ public class RebotinHit : MonoBehaviour, IProjectile
         if (screenPos.y >= Screen.height - 50 || screenPos.y <= 0 + 50)
         {
             _moveDirection.y *= -1;
+            OnBounce?.Invoke();
+
+            transform.position += new Vector3(0, .5f * _moveDirection.y, 0);
         }
 
         if (screenPos.x >= Screen.width - 50 || screenPos.x <= 0 + 50)
         {
             _moveDirection.x *= -1;
+            OnBounce?.Invoke();
+
+            transform.position += new Vector3(.5f * _moveDirection.x, 0, 0);
         }
     }
 
@@ -47,11 +47,31 @@ public class RebotinHit : MonoBehaviour, IProjectile
         Hit(collision);
     }
 
+    private void OnDestroy()
+    {
+        OnBounce -= Bounce;
+        OnDestroyBullet.Invoke();
+    }
+
+    public void Shoot(Vector2 newMoveDir)
+    {
+        _moveDirection = newMoveDir;
+    }
+
     public void Hit(Collider2D collision)
     {
         if (collision.CompareTag("Enemy"))
         {
             collision.GetComponent<IDamageable>().TakeDamage(damage);
+        }
+    }
+
+    private void Bounce()
+    {
+        _bouncesCounter++;
+        if (_bouncesCounter==maxBounces)
+        {
+            Destroy(gameObject);
         }
     }
 }
