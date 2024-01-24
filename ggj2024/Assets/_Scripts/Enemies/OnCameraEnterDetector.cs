@@ -13,7 +13,6 @@ public class OnCameraEnterDetector : MonoBehaviour
 
     private void OnBecameVisible()
     {
-        print("Visible!!");
         EnemyManager.Instance.AddEnemy(enemyCharacter);
     }
 

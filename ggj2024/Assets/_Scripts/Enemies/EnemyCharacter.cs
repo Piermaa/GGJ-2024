@@ -14,8 +14,10 @@ public class EnemyCharacter : BaseCharacter
         _currentHealth = stats.MaxHealth;
     }
 
-    private void OnDestroy()
+    public override void Death()
     {
-        EnemyManager.Instance.RemoveEnemy(this);
+        EnemyManager.Instance.EnemyDeath(this, transform.position);
+        base.Death();
     }
+
 }

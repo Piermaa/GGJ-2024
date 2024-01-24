@@ -62,7 +62,7 @@ public class BaseCharacter : MonoBehaviour, IDamageable
         }
     }
 
-    public void Death()
+    public virtual void Death()
     {
         Destroy(gameObject);
     }
