@@ -7,9 +7,9 @@ public class PlayerMeleeAttack : MonoBehaviour
     [SerializeField] int damage;
     [SerializeField] float attackDistance;
 
-    private BaseEnemy nearEnemy;
+    private BaseCharacter nearEnemy;
     
-    bool alreadyAttacking = false;
+    private bool alreadyAttacking = false;
 
     private float attackCooldown;
 
@@ -30,6 +30,11 @@ public class PlayerMeleeAttack : MonoBehaviour
         }
     }
 
+    private void EnemyPlayerDistance()
+    {
+
+    }
+
     private void StartAttacking()
     {
         if(attackCooldown <= 0)
@@ -45,8 +50,7 @@ public class PlayerMeleeAttack : MonoBehaviour
     {
         if (collision.gameObject.layer == 6)
         {
-            Debug.Log("Touching Enemy");
-            nearEnemy = collision.gameObject.GetComponent<BaseEnemy>();
+            nearEnemy = collision.gameObject.GetComponent<BaseCharacter>();
         }
     }
 }
