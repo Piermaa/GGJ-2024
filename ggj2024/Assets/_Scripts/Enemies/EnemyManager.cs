@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
 {
+    [SerializeField] [Range(0,100)] private int nukeDropRatio;
+    [SerializeField] private GameObject nukeDrop;
     public static EnemyManager Instance;
-
+    
     private List<EnemyCharacter> enemiesOnScreen = new();
     private void Awake()
     {
@@ -16,15 +18,6 @@ public class EnemyManager : MonoBehaviour
         else
         {
             Destroy(this);
-        }
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.N))
-        {
-            print(enemiesOnScreen.Count);
-            KillAllEnemiesOnScreen();
         }
     }
 
@@ -45,5 +38,26 @@ public class EnemyManager : MonoBehaviour
             Destroy(enemy.gameObject);
         }
         enemiesOnScreen.Clear();
+    }
+
+    public void TryDropNuke(Vector2 spawnPos)
+    {
+        if (WillSpawnNukeDrop())
+        { 
+            Instantiate(nukeDrop, spawnPos, Quaternion.identity);
+        }
+    }
+
+    private bool WillSpawnNukeDrop()
+    {
+        float chance = Random.Range(0, 100);
+        
+        return chance <= nukeDropRatio;
+    }
+
+    public void EnemyDeath(EnemyCharacter enemy,Vector2 deathPos)
+    {
+        TryDropNuke(deathPos);
+        RemoveEnemy(enemy);
     }
 }

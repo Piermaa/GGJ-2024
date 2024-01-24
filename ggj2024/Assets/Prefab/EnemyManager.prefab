@@ -44,3 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a685256a577fc04ca97444f65ffc288, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nukeDropRatio: 5
+  nukeDrop: {fileID: 6144451814148777567, guid: e4bf1ee1d61caed4da599579b2654dd9, type: 3}
