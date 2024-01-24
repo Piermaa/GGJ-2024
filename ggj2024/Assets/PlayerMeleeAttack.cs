@@ -6,15 +6,14 @@ public class PlayerMeleeAttack : MonoBehaviour
 {
     [SerializeField] int damage;
     [SerializeField] float attackDistance;
-    [SerializeField] float enemyDistance;
+    [SerializeField] GameObject automaticAttackPivot;
+    [SerializeField] EnemyList enemyListRef;
 
     private BaseCharacter nearEnemy;
     
     private bool alreadyAttacking = false;
 
     private float attackCooldown;
-
-    private List<GameObject> enemyList;
 
 
     // Start is called before the first frame update
@@ -26,62 +25,76 @@ public class PlayerMeleeAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(nearEnemy != null)
+        if(enemyListRef.enemyList.Count > 0)
         {
-            StartAttacking(CloserEnemy());
+            AimToClosestEnemy(CloserEnemy());
         }
     }
 
-    private GameObject CloserEnemy()
+    private BaseCharacter CloserEnemy()
     {
         float aux2distance = 0;
-        float auxDistance = 0;
+        float auxDistance = 10;
 
-        GameObject closerEnemy = null;
+        BaseCharacter closerEnemy = null;
 
-        for(int i = 0; i < enemyList.Count; i++)
+        for(int i = 0; i < enemyListRef.enemyList.Count; i++)
         {
-            aux2distance = Vector2.Distance(enemyList[i].transform.position, transform.position);
+            aux2distance = Vector2.Distance(enemyListRef.enemyList[i].transform.position, transform.position);
 
-            if (aux2distance < enemyDistance && aux2distance < auxDistance)
+            if (aux2distance < auxDistance)
             {
                 auxDistance = aux2distance;
-                closerEnemy = enemyList[i];
+                closerEnemy = enemyListRef.enemyList[i];
             }
         }
 
         return closerEnemy;
     }
 
-    private void StartAttacking(GameObject enemy)
+    private void AimToClosestEnemy(BaseCharacter enemy)
     {
-        nearEnemy = enemy.GetComponent<BaseCharacter>();
+        nearEnemy = enemy;
 
-        if (attackCooldown <= 0)
+        Vector3 vectorToTarget = nearEnemy.transform.position - transform.position;
+
+        float angle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg;
+
+        Quaternion q = Quaternion.AngleAxis(angle, Vector3.forward);
+
+        transform.rotation = Quaternion.Slerp(transform.rotation, q, Time.deltaTime * 15);
+
+        if (attackCooldown <= 0 && alreadyAttacking)
         {
             attackCooldown = 1f;
-            nearEnemy.TakeDamage(damage);
+            Attack(nearEnemy);
         }
         else
             attackCooldown -= Time.deltaTime;
+    }
+
+    private void Attack(BaseCharacter enemy)
+    {
+        enemy.TakeDamage(damage);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.layer == 6)
         {
-            enemyList.Add(collision.gameObject.GetComponent<GameObject>());
+            alreadyAttacking = true;
         }
     }
 
-    private void OnDrawGizmos()
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        Gizmos.color = Color.red;
-        Gizmos.DrawSphere(transform.position, enemyDistance);
-        for (int i = 0; i < enemyList.Count; i++)
+        if (collision.gameObject.layer == 6)
         {
-            Gizmos.DrawLine(enemyList[i].transform.position, transform.position);
+            enemyListRef.enemyList.Remove(collision.gameObject.GetComponent<BaseCharacter>());
+            nearEnemy = null;
+            alreadyAttacking = false;
         }
-        
     }
+
+
 }
