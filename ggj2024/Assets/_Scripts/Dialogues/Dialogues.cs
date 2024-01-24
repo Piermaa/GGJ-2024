@@ -12,17 +12,11 @@ public class Dialogues : MonoBehaviour
         [SerializeField] public string[] _lines;
     }
 
-    private GameObject _teleman;
     [SerializeField] private Lines[] _dialogues;
     [SerializeField] private TextMeshProUGUI textComponent;
     [SerializeField] private float _textSpeed = 0.1f;
     private int _dialogueIndex;
     private int _linesIndex;
-
-    private void Awake()
-    {
-        _teleman = GameObject.FindGameObjectWithTag("Teleman");
-    }
 
     void Start()
     {
@@ -83,7 +77,6 @@ public class Dialogues : MonoBehaviour
         textComponent.text = string.Empty;
         _dialogueIndex++;
         _linesIndex = 0;
-        _teleman.transform.position = _dialogues[_dialogueIndex]._newPosition.position;
         StartDialogue();
     }
 }
