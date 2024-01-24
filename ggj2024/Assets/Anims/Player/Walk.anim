@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Idle
+  m_Name: Walk
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -31,7 +31,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.016666668
+        time: 0.4
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -51,7 +51,13 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 79046804, guid: bdd2e8e4719583e43824a047cd90886b, type: 3}
+      value: {fileID: -1189496779, guid: cdbde6ad7d094e64fbb6e471f71829d8, type: 3}
+    - time: 0.1
+      value: {fileID: -1447388218, guid: cdbde6ad7d094e64fbb6e471f71829d8, type: 3}
+    - time: 0.2
+      value: {fileID: 1317913548, guid: cdbde6ad7d094e64fbb6e471f71829d8, type: 3}
+    - time: 0.3
+      value: {fileID: 2105644248, guid: cdbde6ad7d094e64fbb6e471f71829d8, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -83,13 +89,16 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 79046804, guid: bdd2e8e4719583e43824a047cd90886b, type: 3}
+    - {fileID: -1189496779, guid: cdbde6ad7d094e64fbb6e471f71829d8, type: 3}
+    - {fileID: -1447388218, guid: cdbde6ad7d094e64fbb6e471f71829d8, type: 3}
+    - {fileID: 1317913548, guid: cdbde6ad7d094e64fbb6e471f71829d8, type: 3}
+    - {fileID: 2105644248, guid: cdbde6ad7d094e64fbb6e471f71829d8, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.016666668
+    m_StopTime: 0.4
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -119,7 +128,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.016666668
+        time: 0.4
         value: 0
         inSlope: Infinity
         outSlope: Infinity
