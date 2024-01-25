@@ -5,8 +5,10 @@ using UnityEngine;
 public class EnemyCharacter : BaseCharacter
 {
     public EnemyStats Stats =>stats;
+    public int Damage => damage;
 
     [SerializeField] private EnemyStats stats;
+    [SerializeField] private int damage;
 
     protected override void Awake()
     {

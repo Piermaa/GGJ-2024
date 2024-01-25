@@ -121,6 +121,7 @@ MonoBehaviour:
   _damageNotification: {fileID: 5056466103016932401}
   resetMaterialTime: 0.1
   stats: {fileID: 11400000, guid: 806aa300041e35c49b1e401c2dfe88cb, type: 2}
+  damage: 10
 --- !u!114 &3197757398304113789
 MonoBehaviour:
   m_ObjectHideFlags: 0
