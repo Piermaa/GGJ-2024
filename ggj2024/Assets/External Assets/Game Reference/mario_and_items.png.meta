@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 852dc4a8a91440b448c0f202d90eb0e2
+guid: bd4869a10aa895f42bbcca54c9a536f6
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 350
+  spritePixelsToUnits: 25
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -121,7 +121,49 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Mushroom
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 54
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 672aa264611ce6042ba8405717f7cfe6
+      internalID: -361911229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Star
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 18
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b0fa7d88d777ee4aaaa54810b77f1f3
+      internalID: -2031068014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +174,52 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Mushroom: -361911229
+      Star: -2031068014
+      mario_and_items_0: 145476823
+      mario_and_items_1: 1650214747
+      mario_and_items_10: 420472149
+      mario_and_items_11: 765199046
+      mario_and_items_12: -2052059856
+      mario_and_items_13: -212547086
+      mario_and_items_14: -145661727
+      mario_and_items_15: -2078155282
+      mario_and_items_16: 327093747
+      mario_and_items_17: -1993637069
+      mario_and_items_18: 420828595
+      mario_and_items_19: -89797894
+      mario_and_items_2: 1299997335
+      mario_and_items_20: 1669149385
+      mario_and_items_21: -1044546400
+      mario_and_items_22: -1298884556
+      mario_and_items_23: -1563712555
+      mario_and_items_24: -199529778
+      mario_and_items_25: -1475390851
+      mario_and_items_26: 871363944
+      mario_and_items_27: -1252716342
+      mario_and_items_28: 90895587
+      mario_and_items_29: 987351159
+      mario_and_items_3: -393917131
+      mario_and_items_30: -902367856
+      mario_and_items_31: 1077701631
+      mario_and_items_32: -1677931820
+      mario_and_items_33: -555409188
+      mario_and_items_34: -69114824
+      mario_and_items_35: 2005397963
+      mario_and_items_36: 146919258
+      mario_and_items_37: 1309002328
+      mario_and_items_38: -1581456559
+      mario_and_items_4: 661308146
+      mario_and_items_41: 1423315805
+      mario_and_items_42: -197788623
+      mario_and_items_43: 653240641
+      mario_and_items_44: 256819463
+      mario_and_items_5: -227720490
+      mario_and_items_6: 8390253
+      mario_and_items_7: 15836348
+      mario_and_items_8: 1768730058
+      mario_and_items_9: 1592046732
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
