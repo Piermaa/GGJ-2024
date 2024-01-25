@@ -3,20 +3,11 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-
-[System.Serializable]
-public struct Lines
-{
-    [SerializeField] public string[] _lines;
-}
-
 public class Dialogues : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI textComponent;
     [SerializeField] private float _textSpeed = 0.1f;
     [SerializeField] private float _timeBetweenLines = 1;
-
-    private Lines _currentDialogue;
 
     private string[] currentLines;
 
@@ -32,14 +23,14 @@ public class Dialogues : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (textComponent.text == _currentDialogue._lines[_linesIndex])
+            if (textComponent.text == currentLines[_linesIndex])
             {
                 NextLine();
             }
             else
             {
                 StopAllCoroutines();
-                textComponent.text = _currentDialogue._lines[_linesIndex];
+                textComponent.text = currentLines[_linesIndex];
             }
         }
     }
@@ -52,7 +43,7 @@ public class Dialogues : MonoBehaviour
 
     IEnumerator TypeLine()
     {
-        foreach (char c in _currentDialogue._lines[_linesIndex].ToCharArray())
+        foreach (char c in currentLines[_linesIndex].ToCharArray())
         {
             textComponent.text += c;
             yield return new WaitForSeconds(_textSpeed);
@@ -65,7 +56,7 @@ public class Dialogues : MonoBehaviour
 
     void NextLine()
     {
-        if (_linesIndex < _currentDialogue._lines.Length - 1)
+        if (_linesIndex < currentLines.Length - 1)
         {
             _linesIndex++;
             textComponent.text = string.Empty;
@@ -86,9 +77,9 @@ public class Dialogues : MonoBehaviour
         StartDialogue();
     }
 
-    public void SetDialogue(Lines newDialogue)
+    public void SetDialogue(string[] newDialogue)
     {
-        _currentDialogue = newDialogue;
+        currentLines = newDialogue;
         StartDialogue();
     }
 

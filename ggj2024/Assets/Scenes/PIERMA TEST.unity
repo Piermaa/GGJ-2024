@@ -1115,22 +1115,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc2bd33b2f0e25d4a8e24955c5a247cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _dialogue: {fileID: 811878797}
   _dialogues:
   - Tag: Sword
-    DialogueLines:
-      _newPosition: {fileID: 0}
-      _lines:
-      - This Sword is not From this game
-      - Yes it is
     Written: 0
+    DialogueLines:
+    - this is a sword
+    - yes it is
   - Tag: Sword2
-    DialogueLines:
-      _newPosition: {fileID: 0}
-      _lines:
-      - This Sword is not From this game 2
-      - Yes it is
     Written: 0
-  _dialogue: {fileID: 811878797}
+    DialogueLines:
+    - this is a medieval sword
+    - profe es la master sword
+    - eespada medieval
 --- !u!1 &584013804 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6732234323180982734, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
@@ -1346,17 +1343,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea14f1395e6e2e14aa83b214d231bc8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _dialogues:
-  - _newPosition: {fileID: 909483976}
-    _lines:
-    - AAA
-    - LAputa
-  - _newPosition: {fileID: 909483976}
-    _lines:
-    - AAA
-    - LAputa
   textComponent: {fileID: 909483977}
   _textSpeed: 0.1
+  _timeBetweenLines: 1
 --- !u!1 &871565518
 GameObject:
   m_ObjectHideFlags: 0
@@ -1763,6 +1752,10 @@ PrefabInstance:
     - target: {fileID: 6388788939011638627, guid: ac57bc73959c3c543a23bcca89c0f12b, type: 3}
       propertyPath: m_Name
       value: Ajo
+      objectReference: {fileID: 0}
+    - target: {fileID: 8657407673265625298, guid: ac57bc73959c3c543a23bcca89c0f12b, type: 3}
+      propertyPath: ajoDamage
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

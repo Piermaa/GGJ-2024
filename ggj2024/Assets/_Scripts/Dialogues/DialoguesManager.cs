@@ -8,7 +8,7 @@ public struct Dialogue
 {
     public string Tag;
     public bool Written;
-    public Lines DialogueLines;
+    public string[] DialogueLines;
 }
 
 public class DialoguesManager : MonoBehaviour
@@ -17,6 +17,7 @@ public class DialoguesManager : MonoBehaviour
     [SerializeField] private Dialogues _dialogue;
     [SerializeField] private Dialogue[] _dialogues;
     private Dictionary<string,Dialogue> _dialoguesDictionary= new();
+
     private void Awake()
     {
         if (Instance == null)
@@ -56,6 +57,5 @@ public class DialoguesManager : MonoBehaviour
             _dialogue.SetDialogue(_dialoguesDictionary[key].DialogueLines);
             currentDialogue.Written = true;
         }
-
     }
 }
