@@ -13,7 +13,7 @@ public class BaseCharacter : MonoBehaviour, IDamageable
 
     public SpriteRenderer CharacterSprite => _characterSprite;
 
-    public int CurrentHealth => _currentHealth;
+    public float CurrentHealth => _currentHealth;
 
     public AudioClip TakingDamageSound => takingDamageSound;
 
@@ -24,7 +24,7 @@ public class BaseCharacter : MonoBehaviour, IDamageable
 
     [SerializeField] private float resetMaterialTime;
 
-    protected int _currentHealth=100;
+    protected float _currentHealth=100;
 
     private Material _baseMaterial;
     private float _resetMaterialTimer;
@@ -49,7 +49,7 @@ public class BaseCharacter : MonoBehaviour, IDamageable
         }
     }
 
-    public virtual void TakeDamage(int damage)
+    public virtual void TakeDamage(float damage)
     {
         _currentHealth -= damage;
         _characterSprite.material= _flashingWhiteMaterial;
