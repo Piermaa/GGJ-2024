@@ -98,7 +98,6 @@ public class PlayerMeleeAttack : MonoBehaviour
     {
         if (collision.gameObject.layer == 6)
         {
-            enemyListRef.enemyList.Remove(collision.gameObject.GetComponent<BaseCharacter>());
             nearEnemy = null;
             alreadyAttacking = false;
         }
