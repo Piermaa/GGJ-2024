@@ -7,6 +7,7 @@ public class PlayerMeleeAttack : MonoBehaviour
     [SerializeField] int damage;
     [SerializeField] float attackDistance;
     [SerializeField] EnemyList enemyListRef;
+    [SerializeField] GameObject swordSwing;
 
     private BaseCharacter nearEnemy;
 
@@ -86,6 +87,8 @@ public class PlayerMeleeAttack : MonoBehaviour
     private void Attack(BaseCharacter enemy)
     {
         enemy.TakeDamage(damage);
+
+        Instantiate(swordSwing, enemy.transform.position, transform.rotation);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

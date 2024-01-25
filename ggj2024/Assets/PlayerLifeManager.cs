@@ -20,13 +20,13 @@ public class PlayerLifeManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        LifeBar.fillAmount = 1.0f / PlayerRef.CurrentHealth;
+        LifeBar.fillAmount = PlayerRef.CurrentHealth / 100;
         LocateAndFollowPlayer();
         Debug.Log(LifeBar.fillAmount);
     }
 
     private void LocateAndFollowPlayer()
     {
-        transform.position = PlayerRef.transform.position - new Vector3(0, .5f, 0);
+        transform.position = PlayerRef.transform.position - new Vector3(0, 1f, 0);
     }
 }
