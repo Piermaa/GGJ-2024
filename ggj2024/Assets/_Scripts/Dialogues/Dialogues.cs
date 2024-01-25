@@ -7,17 +7,18 @@ using UnityEngine;
 [System.Serializable]
 public struct Lines
 {
-    [SerializeField] public Transform _newPosition;
     [SerializeField] public string[] _lines;
 }
 
 public class Dialogues : MonoBehaviour
 {
-    [SerializeField] private Lines[] _dialogues;
     [SerializeField] private TextMeshProUGUI textComponent;
     [SerializeField] private float _textSpeed = 0.1f;
+    [SerializeField] private float _timeBetweenLines = 1;
 
     private Lines _currentDialogue;
+
+    private string[] currentLines;
 
     private int _dialogueIndex;
     private int _linesIndex;
@@ -56,6 +57,10 @@ public class Dialogues : MonoBehaviour
             textComponent.text += c;
             yield return new WaitForSeconds(_textSpeed);
         }
+
+        yield return new WaitForSeconds(_timeBetweenLines);
+
+        NextLine();
     }
 
     void NextLine()
@@ -77,7 +82,6 @@ public class Dialogues : MonoBehaviour
     {
         textComponent.text = string.Empty;
         _dialogueIndex++;
-        _currentDialogue= _dialogues[_dialogueIndex];
         _linesIndex = 0;
         StartDialogue();
     }

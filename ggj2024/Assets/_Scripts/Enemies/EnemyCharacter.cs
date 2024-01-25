@@ -8,6 +8,7 @@ public class EnemyCharacter : BaseCharacter
 
     [SerializeField] private EnemyStats stats;
 
+
     protected override void Awake()
     {
         base.Awake();

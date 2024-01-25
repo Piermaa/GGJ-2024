@@ -1,9 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Transactions;
-using Unity.PlasticSCM.Editor.WebApi;
 using UnityEngine;
-using UnityEngine.Playables;
+using System;
 
 public class BaseCharacter : MonoBehaviour, IDamageable
 {
@@ -16,6 +12,8 @@ public class BaseCharacter : MonoBehaviour, IDamageable
     public int CurrentHealth => _currentHealth;
 
     public AudioClip TakingDamageSound => takingDamageSound;
+
+    public Action<int> OnTakeDamage;
 
     [SerializeField] private SpriteRenderer _characterSprite;
     [SerializeField] private Material _flashingWhiteMaterial;
@@ -55,6 +53,8 @@ public class BaseCharacter : MonoBehaviour, IDamageable
         _characterSprite.material= _flashingWhiteMaterial;
         _resetMaterialTimer = resetMaterialTime;
         _damageNotification.BeginDamageNotification(damage);
+
+        OnTakeDamage?.Invoke(damage);
 
         if (_currentHealth < 0) 
         {

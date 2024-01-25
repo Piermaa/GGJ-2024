@@ -7,15 +7,15 @@ using UnityEngine;
 public struct Dialogue
 {
     public string Tag;
-    public Lines DialogueLines;
     public bool Written;
+    public Lines DialogueLines;
 }
 
 public class DialoguesManager : MonoBehaviour
 {
     public static DialoguesManager Instance;
-    [SerializeField] private Dialogue[] _dialogues;
     [SerializeField] private Dialogues _dialogue;
+    [SerializeField] private Dialogue[] _dialogues;
     private Dictionary<string,Dialogue> _dialoguesDictionary= new();
     private void Awake()
     {
@@ -49,6 +49,13 @@ public class DialoguesManager : MonoBehaviour
 
     public void SetDialogue(string key)
     {
-        _dialogue.SetDialogue(_dialoguesDictionary[key].DialogueLines);
+        Dialogue currentDialogue = _dialoguesDictionary[key];
+
+        if (!currentDialogue.Written)
+        {
+            _dialogue.SetDialogue(_dialoguesDictionary[key].DialogueLines);
+            currentDialogue.Written = true;
+        }
+
     }
 }

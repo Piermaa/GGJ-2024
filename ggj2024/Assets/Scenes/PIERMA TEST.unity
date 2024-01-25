@@ -1207,6 +1207,22 @@ PrefabInstance:
       value: EnemySpawner
       objectReference: {fileID: 0}
     - target: {fileID: 7619685385674866161, guid: 5452388ce8d459f4d9feb2c4be25e226, type: 3}
+      propertyPath: widthLimits.x
+      value: -29.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7619685385674866161, guid: 5452388ce8d459f4d9feb2c4be25e226, type: 3}
+      propertyPath: widthLimits.y
+      value: 17.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7619685385674866161, guid: 5452388ce8d459f4d9feb2c4be25e226, type: 3}
+      propertyPath: heightLimits.x
+      value: -27.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7619685385674866161, guid: 5452388ce8d459f4d9feb2c4be25e226, type: 3}
+      propertyPath: heightLimits.y
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 7619685385674866161, guid: 5452388ce8d459f4d9feb2c4be25e226, type: 3}
       propertyPath: playerTransform
       value: 
       objectReference: {fileID: 584013810}
@@ -1483,7 +1499,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6376228233977750811, guid: 4ae3bfd495869764a8a6eef2cc2c279f, type: 3}
       propertyPath: nukeDropRatio
-      value: 90
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8708366596284584382, guid: 4ae3bfd495869764a8a6eef2cc2c279f, type: 3}
       propertyPath: m_Name
