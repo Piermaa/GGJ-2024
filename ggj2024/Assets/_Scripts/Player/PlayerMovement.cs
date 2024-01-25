@@ -10,10 +10,13 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody2D rb;
 
+    private Animator anim;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -28,6 +31,11 @@ public class PlayerMovement : MonoBehaviour
             transform.rotation = Quaternion.Euler(new Vector3 (0, 180, 0));
         else if(hor > 0)
             transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
+
+        if (hor != 0 || ver != 0)
+            anim.SetBool("Walk", true);
+        else
+            anim.SetBool("Walk", false);
     }
 
     // Update is called once per frame

@@ -6,7 +6,6 @@ public class PlayerMeleeAttack : MonoBehaviour
 {
     [SerializeField] int damage;
     [SerializeField] float attackDistance;
-    [SerializeField] GameObject automaticAttackPivot;
     [SerializeField] EnemyList enemyListRef;
 
     private BaseCharacter nearEnemy;
@@ -43,7 +42,10 @@ public class PlayerMeleeAttack : MonoBehaviour
 
         for(int i = 0; i < enemyListRef.enemyList.Count; i++)
         {
-            if(enemyListRef.enemyList.Count > 0)
+            if (enemyListRef.enemyList[i] == null)
+                enemyListRef.enemyList.RemoveAt(i);
+
+            if (enemyListRef.enemyList.Count > 0)
             {
                 aux2distance = Vector2.Distance(enemyListRef.enemyList[i].transform.position, transform.position);
 
