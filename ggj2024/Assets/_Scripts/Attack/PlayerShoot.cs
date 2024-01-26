@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class PlayerShoot : MonoBehaviour
 {
+    [SerializeField] private int mouseButton;
     [SerializeField] private GameObject rebotinPrefab;
+    [SerializeField] private float attackCooldown=.1f;
+    private float attackCooldownTimer;
     private bool _canShootRebotin = true;
     private void Awake()
     {
@@ -13,21 +16,38 @@ public class PlayerShoot : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0) && _canShootRebotin)
+
+        if (attackCooldownTimer > 0)
         {
-            Shoot();
+            attackCooldownTimer -= Time.fixedDeltaTime;
         }
+        else
+        {
+            if (Input.GetMouseButtonDown(mouseButton))
+            {
+                if (mouseButton == 1 && _canShootRebotin)
+                {
+                    _canShootRebotin = false;
+                    Shoot();
+                }
+                else
+                {
+                    Shoot();
+                }
+            }
+        }
+
     }
 
     private void Shoot()
     {
-        _canShootRebotin=false;
-
         var rebotin = Instantiate(rebotinPrefab, transform.position, Quaternion.identity);
         var projectile = rebotin.GetComponent<IProjectile>();
 
         var dir = GetDirectionToMouse();
         projectile.Shoot(dir);
+
+        attackCooldownTimer = attackCooldown;
     }
 
     public Vector3 GetDirectionToMouse()
@@ -38,6 +58,7 @@ public class PlayerShoot : MonoBehaviour
 
     private void ReloadRebotin()
     {
+        attackCooldownTimer = attackCooldown;
         _canShootRebotin = true;
     }
 }
