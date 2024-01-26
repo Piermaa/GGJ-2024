@@ -11,4 +11,11 @@ public class DamageNotification : MonoBehaviour
         _textMeshPro.text = damage.ToString();
         _animator.SetTrigger("Begin");
     }
+
+    private void FixedUpdate()
+    {
+        Vector3 scale = transform.localScale;
+        scale.x = transform.parent.localScale.x < 0 ? -1 : 1;
+        transform.localScale = scale;
+    }
 }
