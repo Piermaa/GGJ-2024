@@ -24,6 +24,10 @@ public class EnemyMovement : EnemyBehaviour
         {
             rb2d.velocity=dir * enemyStats.MovementSpeed;
         }
+
+        Vector3 scale= transform.localScale;
+        scale.x= dir.x > 0 ? 1:-1;
+        transform.localScale = scale;
     }
 
     private void OnDestroy()
