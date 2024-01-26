@@ -31,6 +31,6 @@ public class PlayerLifeManager : MonoBehaviour
 
     private void LocateAndFollowPlayer()
     {
-        transform.position = PlayerRef.transform.position - new Vector3(0, 1f, 0);
+        transform.position = PlayerRef.transform.position - new Vector3(0, .7f, 0);
     }
 }
