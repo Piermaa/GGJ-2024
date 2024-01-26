@@ -169,12 +169,46 @@ MonoBehaviour:
     DialogueLines:
     - this is a sword
     - yes it is
-  - Tag: Tag
+  - Tag: Zelda
     Written: 0
     DialogueLines:
-    - this is a medieval sword
-    - profe es la master sword
-    - eespada medieval
+    - Well...
+    - "I think I have seen this sword in another game\u2026"
+  - Tag: MetroidHelmet
+    Written: 0
+    DialogueLines:
+    - Damn, I can't see anything with this
+  - Tag: MetroidHelmetOff
+    Written: 0
+    DialogueLines:
+    - Oh god, So much better
+  - Tag: MarioBrosStar
+    Written: 0
+    DialogueLines:
+    - Here we go!
+    - WOO-HOO
+  - Tag: MarioBrosMushroom
+    Written: 0
+    DialogueLines:
+    - Mamma Mia! i fell dizy
+    - 'Did Mario really eat this garbage? '
+  - Tag: SpaceInvaders
+    Written: 0
+    DialogueLines:
+    - This is so old. Not even new stuff are in this game
+    - Oh, there you are, the four pixel alien, so fun developers!
+  - Tag: Pacman
+    Written: 0
+    DialogueLines:
+    - Excuse me what the actual fuck, that is Pac-Man?
+  - Tag: ResidentEvil
+    Written: 1
+    DialogueLines:
+    - "Was that Spanish? It sounds like\u2026 I don't know, oh shit"
+  - Tag: HotlineMiami
+    Written: 0
+    DialogueLines:
+    - "Was that Spanish? It sounds like\u2026 I don't know, oh shit"
 --- !u!1 &5575128363234707899
 GameObject:
   m_ObjectHideFlags: 0
