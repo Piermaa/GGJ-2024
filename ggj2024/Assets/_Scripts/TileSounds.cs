@@ -29,7 +29,7 @@ public class TileSounds : MonoBehaviour
 
     private void SetTileSound()
     {
-        print(GetTileCategoty());
+     //   print(GetTileCategoty());
     }
 
     private string GetTileCategoty()
