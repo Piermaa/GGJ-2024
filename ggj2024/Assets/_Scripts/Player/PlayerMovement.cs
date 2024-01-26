@@ -26,10 +26,12 @@ public class PlayerMovement : MonoBehaviour
     private float hor;
     private float ver;
 
+    private Vector3 velocity;
     
 
     void Start()
     {
+
         foreach (var clip in walkClips)
         {
             soundsDictionary.Add(clip.Tag, clip.StepClips);
@@ -37,11 +39,16 @@ public class PlayerMovement : MonoBehaviour
         SetStepSounds("Grass");
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        _source = GetComponent<AudioSource>();
     }
 
     private void FixedUpdate()
     {
-        rb.velocity = new Vector2 (hor, ver) * speed;
+        Vector3 move = (new Vector2(hor, ver)).normalized * speed * Time.fixedDeltaTime;
+        Vector3 targetSpeed = move * 50;
+        rb.velocity = Vector3.SmoothDamp(rb.velocity, targetSpeed, ref velocity, .1f);
+
+        // rb.velocity = (new Vector2(hor, ver)).normalized * speed;
 
         if (hor < 0)
             transform.rotation = Quaternion.Euler(new Vector3 (0, 180, 0));
@@ -58,8 +65,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        hor = Input.GetAxis("Horizontal");
-        ver = Input.GetAxis("Vertical");
+        hor = Input.GetAxisRaw("Horizontal");
+        ver = Input.GetAxisRaw("Vertical");
     }
 
     private void StepSounds()

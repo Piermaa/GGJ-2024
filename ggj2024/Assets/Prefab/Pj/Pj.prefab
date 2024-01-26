@@ -234,10 +234,11 @@ GameObject:
   - component: {fileID: 7988522401684516040}
   - component: {fileID: 6949664469506525694}
   - component: {fileID: 689672237237402618}
+  - component: {fileID: 4137930337772021058}
   - component: {fileID: 4336883333873556730}
   - component: {fileID: 8011295596932075096}
   - component: {fileID: 1568100710680796049}
-  - component: {fileID: 4072613457590807835}
+  - component: {fileID: 4626860575285513350}
   m_Layer: 3
   m_Name: Pj
   m_TagString: Player
@@ -260,7 +261,7 @@ Transform:
   m_Children:
   - {fileID: 5096218254276074218}
   - {fileID: 3698407428178421202}
-  - {fileID: 5337043515724425189}
+  - {fileID: 2207774732889189044}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7193537992649511525
@@ -399,11 +400,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6908a67b74f423d4fbd7014018fee957, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 10
   walkClips:
-  - Tag: 
-    StepClips: []
-  timeBetweenStepSounds: 0
+  - Tag: Grass
+    StepClips:
+    - {fileID: 0}
+  - Tag: Stones
+    StepClips:
+    - {fileID: 0}
+  - Tag: Pacman
+    StepClips:
+    - {fileID: 0}
+  timeBetweenStepSounds: 0.2
   rb: {fileID: 7522434255971589701}
   anim: {fileID: 4336883333873556730}
 --- !u!114 &689672237237402618
@@ -419,6 +427,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerRef: {fileID: 0}
+--- !u!114 &4137930337772021058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6732234323180982734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c93be1d81cd03644a5431e6417fb88a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _characterSprite: {fileID: 7193537992649511525}
+  _flashingWhiteMaterial: {fileID: 2100000, guid: da96aa490a6293645b534b7ec16841e5, type: 2}
+  takingDamageAudioClip: {fileID: 0}
+  _damageNotification: {fileID: 905868348599660868}
+  resetMaterialTime: 0.1
 --- !u!95 &4336883333873556730
 Animator:
   serializedVersion: 5
@@ -551,7 +576,7 @@ MonoBehaviour:
   mouseButton: 0
   rebotinPrefab: {fileID: 3741207102647645952, guid: ed243a3ef7f3b3c40a7f7db68c734b38, type: 3}
   attackCooldown: 0.1
---- !u!114 &4072613457590807835
+--- !u!114 &4626860575285513350
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -560,21 +585,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 6732234323180982734}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57f5059735ca59749b3a0b1a64392d39, type: 3}
+  m_Script: {fileID: 11500000, guid: 84fe04094a08d764eb54d4338d30d795, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _characterSprite: {fileID: 7193537992649511525}
-  _flashingWhiteMaterial: {fileID: 2100000, guid: da96aa490a6293645b534b7ec16841e5, type: 2}
-  takingDamageAudioClip: {fileID: 0}
-  _damageNotification: {fileID: 6350394153850010645}
-  resetMaterialTime: 0.1
-  StartCountDown: 0
-  MushroomPickUp: 0
-  SamusPickUp: 0
-  StarPickUp: 0
-  PackmanPickUp: 0
-  durationEffectTimer: 2
---- !u!1001 &2633597965506530875
+  mouseButton: 1
+  rebotinPrefab: {fileID: 6906326865816838993, guid: 63fe039b5d95c6e478b4ef70aa82a1b1, type: 3}
+  attackCooldown: 3
+--- !u!1001 &8088184304293266282
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -671,15 +688,10 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d34346a19476b9340acc1935860481a8, type: 3}
---- !u!224 &5337043515724425189 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 7970412195173050846, guid: d34346a19476b9340acc1935860481a8, type: 3}
-  m_PrefabInstance: {fileID: 2633597965506530875}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &6350394153850010645 stripped
+--- !u!114 &905868348599660868 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8983918964950643246, guid: d34346a19476b9340acc1935860481a8, type: 3}
-  m_PrefabInstance: {fileID: 2633597965506530875}
+  m_PrefabInstance: {fileID: 8088184304293266282}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -687,3 +699,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc3fa7b0df0ed784082efc72815faa59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!224 &2207774732889189044 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7970412195173050846, guid: d34346a19476b9340acc1935860481a8, type: 3}
+  m_PrefabInstance: {fileID: 8088184304293266282}
+  m_PrefabAsset: {fileID: 0}
