@@ -1,12 +1,19 @@
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class BasicShoot : MonoBehaviour, IProjectile
 {
     [SerializeField] private float moveSpeed;
     [SerializeField] private int damage;
     [SerializeField] private float lifeTime=2;
+    [SerializeField] private AudioClip shootSound;
 
     private Vector2 _moveDirection;
+
+    private void Awake()
+    {
+        GetComponent<AudioSource>().PlayOneShot(shootSound);
+    }
 
     private void FixedUpdate()
     {

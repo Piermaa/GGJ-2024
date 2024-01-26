@@ -1,6 +1,7 @@
 using UnityEngine;
 using System;
 
+[RequireComponent(typeof(AudioSource))]
 public class BaseCharacter : MonoBehaviour, IDamageable
 {
     public Material BaseMaterial => _baseMaterial;
@@ -11,16 +12,18 @@ public class BaseCharacter : MonoBehaviour, IDamageable
 
     public float CurrentHealth => _currentHealth;
 
-    public AudioClip TakingDamageSound => takingDamageSound;
+    public AudioClip TakingDamageSound => takingDamageAudioClip;
 
     public Action<float> OnTakeDamage;
 
     [SerializeField] private SpriteRenderer _characterSprite;
     [SerializeField] private Material _flashingWhiteMaterial;
-    [SerializeField] private AudioClip takingDamageSound;
+    [SerializeField] private AudioClip takingDamageAudioClip;
     [SerializeField] private DamageNotification _damageNotification;
 
     [SerializeField] private float resetMaterialTime;
+
+    private AudioSource takingDamageAudioSource;
 
     protected float _currentHealth=100;
 
@@ -30,10 +33,9 @@ public class BaseCharacter : MonoBehaviour, IDamageable
     protected virtual void Awake()
     {
         _baseMaterial = _characterSprite.material;
+        takingDamageAudioSource = GetComponent<AudioSource>();
     }
 
-
-    // Update is called once per frame
     void Update()
     {
         if (_resetMaterialTimer > 0)
@@ -55,6 +57,8 @@ public class BaseCharacter : MonoBehaviour, IDamageable
         _damageNotification.BeginDamageNotification(damage);
 
         OnTakeDamage?.Invoke(damage);
+
+        takingDamageAudioSource.PlayOneShot(takingDamageAudioClip);
 
         if (_currentHealth < 0) 
         {

@@ -7,6 +7,7 @@ public class PlayerShoot : MonoBehaviour
     [SerializeField] private int mouseButton;
     [SerializeField] private GameObject rebotinPrefab;
     [SerializeField] private float attackCooldown=.1f;
+
     private float attackCooldownTimer;
     private bool _canShootRebotin = true;
     private void Awake()
@@ -19,11 +20,11 @@ public class PlayerShoot : MonoBehaviour
 
         if (attackCooldownTimer > 0)
         {
-            attackCooldownTimer -= Time.fixedDeltaTime;
+            attackCooldownTimer -= Time.deltaTime;
         }
         else
         {
-            if (Input.GetMouseButtonDown(mouseButton))
+            if (Input.GetMouseButton(mouseButton))
             {
                 if (mouseButton == 1 && _canShootRebotin)
                 {

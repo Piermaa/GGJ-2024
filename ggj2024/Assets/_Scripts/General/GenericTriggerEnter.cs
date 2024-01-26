@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class GenericTriggerEnter : OnPlayerTriggerEnter
 {
-    private UnityEvent onTriggerEnterEvent;
+    [SerializeField] private UnityEvent onTriggerEnterEvent;
 
     protected override void Trigger(GameObject playerObject)
     {

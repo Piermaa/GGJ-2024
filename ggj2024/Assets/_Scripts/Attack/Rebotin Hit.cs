@@ -1,6 +1,7 @@
 using UnityEngine;
 using System;
 
+[RequireComponent(typeof(AudioSource))]
 public class RebotinHit : MonoBehaviour, IProjectile
 {
     public Action OnBounce;
@@ -11,11 +12,13 @@ public class RebotinHit : MonoBehaviour, IProjectile
     [SerializeField] private int damage;
     [SerializeField] private int maxBounces;
     [SerializeField] private Vector2 _moveDirection;
+    [SerializeField] private AudioClip shootSound;
 
     private int _bouncesCounter;
 
     private void Awake()
     {
+        GetComponent<AudioSource>().PlayOneShot(shootSound);
         OnBounce += Bounce;
     }
 
