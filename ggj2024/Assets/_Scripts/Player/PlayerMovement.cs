@@ -15,6 +15,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private StepSounds[] walkClips;
     [SerializeField] private float timeBetweenStepSounds;
+    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private Animator anim;
 
     private Dictionary<string, AudioClip[]> soundsDictionary=new();
     private AudioClip[] currentStepSound;
@@ -24,8 +26,7 @@ public class PlayerMovement : MonoBehaviour
     private float hor;
     private float ver;
 
-    private Rigidbody2D rb;
-    private Animator anim;
+    
 
     void Start()
     {

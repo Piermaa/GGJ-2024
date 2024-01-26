@@ -286,11 +286,6 @@ MonoBehaviour:
   LifeBar: {fileID: 178161350}
   LifeAmount: 0
   PlayerRef: {fileID: 0}
---- !u!1 &376342228 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6732234323180982734, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
-  m_PrefabInstance: {fileID: 6411430052701115469}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &634075449
 GameObject:
   m_ObjectHideFlags: 0
@@ -605,41 +600,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2758035766894549907, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
   m_PrefabInstance: {fileID: 6411430052701115469}
   m_PrefabAsset: {fileID: 0}
---- !u!212 &1702739550 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 7193537992649511525, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
-  m_PrefabInstance: {fileID: 6411430052701115469}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1702739551
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 376342228}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c93be1d81cd03644a5431e6417fb88a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _characterSprite: {fileID: 1702739550}
-  _flashingWhiteMaterial: {fileID: 2100000, guid: da96aa490a6293645b534b7ec16841e5, type: 2}
-  takingDamageSound: {fileID: 0}
-  _damageNotification: {fileID: 0}
-  resetMaterialTime: 0.1
---- !u!114 &1702739552
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 376342228}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b5df1d63a6f9f8469848b4680994ca5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerRef: {fileID: 0}
 --- !u!1 &2032302228 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3034836444443064785, guid: eca131896eeb57741a3f7fca5c29c6c2, type: 3}
@@ -782,13 +742,7 @@ PrefabInstance:
     - {fileID: 6163803667258021223, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
     - {fileID: 747185106640121567, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6732234323180982734, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
-      insertIndex: 5
-      addedObject: {fileID: 1702739552}
-    - targetCorrespondingSourceObject: {fileID: 6732234323180982734, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
-      insertIndex: 6
-      addedObject: {fileID: 1702739551}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

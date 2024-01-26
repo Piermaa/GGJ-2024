@@ -17,12 +17,16 @@ public class PlayerLifeManager : MonoBehaviour
         PlayerRef = GameObject.FindWithTag("Player").GetComponent<BaseCharacter>();
     }
 
+    private void FixedUpdate()
+    {
+        LocateAndFollowPlayer();
+    }
+
     // Update is called once per frame
     void Update()
     {
         LifeBar.fillAmount = PlayerRef.CurrentHealth / 100;
-        LocateAndFollowPlayer();
-        Debug.Log(LifeBar.fillAmount);
+        
     }
 
     private void LocateAndFollowPlayer()
