@@ -12,7 +12,7 @@ public struct StepSounds
 [RequireComponent(typeof(AudioSource))]
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private float speed;
+    public float speed;
     [SerializeField] private StepSounds[] walkClips;
     [SerializeField] private float timeBetweenStepSounds;
     [SerializeField] private Rigidbody2D rb;
