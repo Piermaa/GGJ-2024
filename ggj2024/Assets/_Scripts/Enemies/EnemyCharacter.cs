@@ -10,6 +10,7 @@ public class EnemyCharacter : BaseCharacter
     [SerializeField] private EnemyStats stats;
     [SerializeField] private int damage;
 
+
     protected override void Awake()
     {
         base.Awake();

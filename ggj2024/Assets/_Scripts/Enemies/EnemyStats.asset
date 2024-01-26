@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _stats:
     MovementSpeed: 1.5
+    KnockbackForce: 0.1
+    KnockbackTime: 0.1
     MaxHealth: 100
     Damage: 5

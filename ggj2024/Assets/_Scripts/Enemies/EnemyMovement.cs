@@ -6,14 +6,51 @@ public class EnemyMovement : EnemyBehaviour
 {
     [SerializeField] private Transform _playerTransform;
 
+    private Rigidbody2D rb2d;
+    private bool _isOnKnockbackState=false;
+
+    protected override void Awake()
+    {
+        base.Awake();
+        rb2d = GetComponent<Rigidbody2D>();   
+        GetComponent<BaseCharacter>().OnTakeDamage+=Knockback;
+    }
+
     private void FixedUpdate()
     {
         Vector2 dir= (_playerTransform.position - transform.position).normalized;
-        transform.Translate(dir * enemyStats.MovementSpeed * Time.fixedDeltaTime);
+
+        if (!_isOnKnockbackState)
+        {
+            rb2d.velocity=dir * enemyStats.MovementSpeed;
+        }
     }
+
+    private void OnDestroy()
+    {
+        GetComponent<BaseCharacter>().OnTakeDamage -= Knockback;
+    }
+
+    private void Knockback(int multiplier)
+    {
+        StopAllCoroutines();
+        StartCoroutine(ReceivingKnockBack(multiplier));
+    }
+
 
     public void SetPlayer(Transform playerTransform)
     { 
         _playerTransform = playerTransform;
     }
+
+    private IEnumerator ReceivingKnockBack(int multiplier)
+    {
+        Vector2 dir = (transform.position - _playerTransform.position).normalized;
+        rb2d.AddForce(enemyStats.KnockbackForce * multiplier * dir, ForceMode2D.Impulse);
+        _isOnKnockbackState = true;
+
+        yield return new WaitForSeconds(enemyStats.KnockbackTime);
+        _isOnKnockbackState= false;
+    }
+ 
 }

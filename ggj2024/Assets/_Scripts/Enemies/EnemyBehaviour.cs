@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyBehaviour : MonoBehaviour
 {
     protected EnemyStats enemyStats;
-    private void Awake()
+    protected virtual void Awake()
     {
         enemyStats = GetComponent<EnemyCharacter>().Stats;
     }

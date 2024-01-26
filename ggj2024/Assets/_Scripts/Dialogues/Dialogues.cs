@@ -5,38 +5,32 @@ using UnityEngine;
 
 public class Dialogues : MonoBehaviour
 {
-    [System.Serializable]
-    public struct Lines
-    {
-        [SerializeField] public Transform _newPosition;
-        [SerializeField] public string[] _lines;
-    }
-
-    [SerializeField] private Lines[] _dialogues;
     [SerializeField] private TextMeshProUGUI textComponent;
     [SerializeField] private float _textSpeed = 0.1f;
+    [SerializeField] private float _timeBetweenLines = 1;
+
+    private string[] currentLines;
+
     private int _dialogueIndex;
     private int _linesIndex;
 
     void Start()
     {
         textComponent.text = string.Empty;
-        StartDialogue();
     }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (textComponent.text == _dialogues[_dialogueIndex]._lines[_linesIndex])
+            if (textComponent.text == currentLines[_linesIndex])
             {
                 NextLine();
             }
-
             else
             {
                 StopAllCoroutines();
-                textComponent.text = _dialogues[_dialogueIndex]._lines[_linesIndex];
+                textComponent.text = currentLines[_linesIndex];
             }
         }
     }
@@ -44,22 +38,25 @@ public class Dialogues : MonoBehaviour
     public void StartDialogue()
     {
         _linesIndex = 0;
-
         StartCoroutine(TypeLine());
     }
 
     IEnumerator TypeLine()
     {
-        foreach (char c in _dialogues[_dialogueIndex]._lines[_linesIndex].ToCharArray())
+        foreach (char c in currentLines[_linesIndex].ToCharArray())
         {
             textComponent.text += c;
             yield return new WaitForSeconds(_textSpeed);
         }
+
+        yield return new WaitForSeconds(_timeBetweenLines);
+
+        NextLine();
     }
 
     void NextLine()
     {
-        if (_linesIndex < _dialogues[_dialogueIndex]._lines.Length - 1)
+        if (_linesIndex < currentLines.Length - 1)
         {
             _linesIndex++;
             textComponent.text = string.Empty;
@@ -79,4 +76,11 @@ public class Dialogues : MonoBehaviour
         _linesIndex = 0;
         StartDialogue();
     }
+
+    public void SetDialogue(string[] newDialogue)
+    {
+        currentLines = newDialogue;
+        StartDialogue();
+    }
+
 }
