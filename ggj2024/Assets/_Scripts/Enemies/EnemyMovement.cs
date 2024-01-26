@@ -31,7 +31,7 @@ public class EnemyMovement : EnemyBehaviour
         GetComponent<BaseCharacter>().OnTakeDamage -= Knockback;
     }
 
-    private void Knockback(int multiplier)
+    private void Knockback(float multiplier)
     {
         StopAllCoroutines();
         StartCoroutine(ReceivingKnockBack(multiplier));
@@ -43,7 +43,7 @@ public class EnemyMovement : EnemyBehaviour
         _playerTransform = playerTransform;
     }
 
-    private IEnumerator ReceivingKnockBack(int multiplier)
+    private IEnumerator ReceivingKnockBack(float multiplier)
     {
         Vector2 dir = (transform.position - _playerTransform.position).normalized;
         rb2d.AddForce(enemyStats.KnockbackForce * multiplier * dir, ForceMode2D.Impulse);

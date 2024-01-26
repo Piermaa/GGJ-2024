@@ -13,7 +13,7 @@ public class BaseCharacter : MonoBehaviour, IDamageable
 
     public AudioClip TakingDamageSound => takingDamageSound;
 
-    public Action<int> OnTakeDamage;
+    public Action<float> OnTakeDamage;
 
     [SerializeField] private SpriteRenderer _characterSprite;
     [SerializeField] private Material _flashingWhiteMaterial;
