@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 
 [System.Serializable]
-public struct Dialogue
+public class Dialogue
 {
     public string Tag;
     public bool Written;
@@ -55,7 +55,7 @@ public class DialoguesManager : MonoBehaviour
         if (!currentDialogue.Written)
         {
             _dialogue.SetDialogue(_dialoguesDictionary[key].DialogueLines);
-            currentDialogue.Written = true;
+            _dialoguesDictionary[key].Written = true;
         }
     }
 }
