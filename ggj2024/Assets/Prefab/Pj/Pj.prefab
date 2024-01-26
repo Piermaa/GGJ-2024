@@ -400,11 +400,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6908a67b74f423d4fbd7014018fee957, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 10
   walkClips:
-  - Tag: 
-    StepClips: []
-  timeBetweenStepSounds: 0
+  - Tag: Grass
+    StepClips:
+    - {fileID: 0}
+  - Tag: Stones
+    StepClips:
+    - {fileID: 0}
+  - Tag: Pacman
+    StepClips:
+    - {fileID: 0}
+  timeBetweenStepSounds: 0.2
   rb: {fileID: 7522434255971589701}
   anim: {fileID: 4336883333873556730}
 --- !u!114 &689672237237402618
