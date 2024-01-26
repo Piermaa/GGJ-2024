@@ -6,10 +6,9 @@ public class PlayerMeleeAttack : MonoBehaviour
 {
     [SerializeField] int damage;
     [SerializeField] float attackDistance;
-    [SerializeField] EnemyList enemyListRef;
     [SerializeField] GameObject swordSwing;
 
-    private BaseCharacter nearEnemy;
+    private EnemyCharacter nearEnemy;
 
     private bool alreadyAttacking = false;
 
@@ -28,33 +27,27 @@ public class PlayerMeleeAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(enemyListRef.enemyList.Count > 0)
+        if(EnemyManager.Instance.EnemyList.Count > 0)
         {
             AimToClosestEnemy(CloserEnemy());
         }
     }
 
-    private BaseCharacter CloserEnemy()
+    private EnemyCharacter CloserEnemy()
     {
         float aux2distance = 0;
-        float auxDistance = 10;
+        float auxDistance = 1000;
 
-        BaseCharacter closerEnemy = null;
+        EnemyCharacter closerEnemy = null;
 
-        for(int i = 0; i < enemyListRef.enemyList.Count; i++)
+        for(int i = 0; i < EnemyManager.Instance.EnemyList.Count; i++)
         {
-            if (enemyListRef.enemyList[i] == null)
-                enemyListRef.enemyList.RemoveAt(i);
+            aux2distance = Vector2.Distance(EnemyManager.Instance.EnemyList[i].transform.position, transform.position);
 
-            if (enemyListRef.enemyList.Count > 0)
+            if (aux2distance < auxDistance)
             {
-                aux2distance = Vector2.Distance(enemyListRef.enemyList[i].transform.position, transform.position);
-
-                if (aux2distance < auxDistance)
-                {
-                    auxDistance = aux2distance;
-                    closerEnemy = enemyListRef.enemyList[i];
-                }
+                auxDistance = aux2distance;
+                closerEnemy = EnemyManager.Instance.EnemyList[i];
             }
             
         }
@@ -62,7 +55,7 @@ public class PlayerMeleeAttack : MonoBehaviour
         return closerEnemy;
     }
 
-    private void AimToClosestEnemy(BaseCharacter enemy)
+    private void AimToClosestEnemy(EnemyCharacter enemy)
     {
         nearEnemy = enemy;
 
@@ -78,17 +71,10 @@ public class PlayerMeleeAttack : MonoBehaviour
         {
             attackCooldown = 1f;
             anim.SetTrigger("Attack");
-            Attack(nearEnemy);
+            Instantiate(swordSwing, nearEnemy.transform.position + new Vector3(0, 0, -2), Quaternion.Euler(Vector3.forward * angle + new Vector3(0, 0, 77)));
         }
         else
             attackCooldown -= Time.deltaTime;
-    }
-
-    private void Attack(BaseCharacter enemy)
-    {
-        enemy.TakeDamage(damage);
-
-        Instantiate(swordSwing, enemy.transform.position, transform.rotation);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

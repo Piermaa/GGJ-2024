@@ -10,10 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 2010743695963823454}
   - component: {fileID: 7553187545003992270}
+  - component: {fileID: 8665505860775158296}
   - component: {fileID: 3208039596123136351}
   - component: {fileID: 7968819414642575963}
   m_Layer: 3
-  m_Name: SwordSwing
+  m_Name: SwordSlash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,13 +28,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8137170320906700535}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0.6274477, w: -0.7786586}
+  m_LocalRotation: {x: 0, y: 0, z: 0.6225146, w: 0.7826082}
   m_LocalPosition: {x: 0.14, y: 0.146, z: -1}
   m_LocalScale: {x: 0.62673813, y: 1.7190696, z: 0.37}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 77.724}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 77}
 --- !u!212 &7553187545003992270
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -80,12 +81,57 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 0, y: 4}
+  m_Size: {x: 5.4, y: 4}
   m_AdaptiveModeThreshold: 1
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &8665505860775158296
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8137170320906700535}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.24959326, y: -0.0031374693}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.5, y: 4}
+    newSize: {x: 5.4, y: 4}
+    adaptiveTilingThreshold: 1
+    drawMode: 2
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.5515585, y: 0.5276133}
+  m_EdgeRadius: 0
 --- !u!114 &3208039596123136351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98,6 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cefccb4ef28af6041bc1eaaa41d6fb68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  swordDamage: 10
 --- !u!95 &7968819414642575963
 Animator:
   serializedVersion: 5
