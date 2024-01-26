@@ -49,7 +49,7 @@ public class PlayerMeleeAttack : MonoBehaviour
                 auxDistance = aux2distance;
                 closerEnemy = EnemyManager.Instance.EnemyList[i];
             }
-            
+       
         }
 
         return closerEnemy;
@@ -93,6 +93,4 @@ public class PlayerMeleeAttack : MonoBehaviour
             alreadyAttacking = false;
         }
     }
-
-
 }
