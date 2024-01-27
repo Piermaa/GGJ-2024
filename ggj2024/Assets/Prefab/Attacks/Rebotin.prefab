@@ -4936,6 +4936,7 @@ MonoBehaviour:
   maxBounces: 4
   _moveDirection: {x: 0.9121195, y: -0.40992433}
   shootSound: {fileID: 8300000, guid: 28ec321638808594f9b30392c7d1c8fa, type: 3}
+  reboteSound: {fileID: 8300000, guid: 2b6652477fadf3448825549490deee8b, type: 3}
 --- !u!61 &6537448687649382115
 BoxCollider2D:
   m_ObjectHideFlags: 0
