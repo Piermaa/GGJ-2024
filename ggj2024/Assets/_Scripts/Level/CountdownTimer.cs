@@ -43,6 +43,7 @@ public class CountdownTimer : MonoBehaviour
 
     private void SecondElapsed()
     {
+        print("SecondElapsed: "+ secondsElapsed);
         eventTimer = 0;
         if (seconds != 0 && (secondsElapsed % timeBetweenEvents) == 0)
         {

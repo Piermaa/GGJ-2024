@@ -8,11 +8,13 @@ public class AjoHit : MonoBehaviour
     [SerializeField] private float radius;
     [SerializeField] private LayerMask whatIsEnemy;
     [SerializeField] private GameObject child;
+    [SerializeField] private AudioSource source;
     private Camera _camera;
     private bool unlocked=false;
 
     private void Awake()
     {
+        source = GetComponent<AudioSource>();
         CountdownTimer.OnTimeElapsed += UnlockAjo;
         _camera = Camera.main;
 
@@ -35,6 +37,8 @@ public class AjoHit : MonoBehaviour
             {
                 enemy.GetComponent<IDamageable>().TakeDamage(ajoDamage);
             }
+
+            source.Play();
         }
     }
 

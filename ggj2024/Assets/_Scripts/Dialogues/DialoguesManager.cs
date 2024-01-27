@@ -59,6 +59,11 @@ public class DialoguesManager : MonoBehaviour
 
     public void SetDialogue(string key)
     {
+        if(key == string.Empty)
+        {
+            return;
+        }
+
         Dialogue currentDialogue = _dialoguesDictionary[key];
 
         if (!currentDialogue.Written && _dialogue.SetDialogue(_dialoguesDictionary[key], isPlayer))

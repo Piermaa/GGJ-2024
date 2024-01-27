@@ -33,6 +33,8 @@ public class AbilityCooldown : MonoBehaviour
     {
         if (TimeToUnlock==timeElapsed)
         {
+            print($"Time to unlock {TimeToUnlock}, timeelapsed: {timeElapsed}");
+
             icon.enabled = true;
             abilityCooldown.enabled = true;
             playerShoot.enabled = true;
