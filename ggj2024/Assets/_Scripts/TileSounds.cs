@@ -16,12 +16,12 @@ public class TileSounds : MonoBehaviour
     private PlayerMovement playerMovement;
     private Tilemap tilemap;
     private Vector3Int location;
-    private Transform playerTransform;
+   [SerializeField] private Transform playerTransform;
 
     private void Awake()
     {
         tilemap = GetComponent<Tilemap>();
-        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+
         playerMovement = playerTransform.GetComponent<PlayerMovement>();
     }
     // Start is called before the first frame update
