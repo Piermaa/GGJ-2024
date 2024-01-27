@@ -53,6 +53,7 @@ MonoBehaviour:
     m_Bits: 64
   child: {fileID: 7230511592999290591}
   source: {fileID: 180642906108423215}
+  OnUnlockText: "New Ability Unlocked:  \nDPS Area around the mouse"
 --- !u!82 &180642906108423215
 AudioSource:
   m_ObjectHideFlags: 0

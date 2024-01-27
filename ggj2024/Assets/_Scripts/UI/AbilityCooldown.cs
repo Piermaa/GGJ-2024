@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class AbilityCooldown : MonoBehaviour
 {
+    [SerializeField] private UnlockNotification notif;
     [SerializeField] private CountdownTimer _countdownTimer;
     [SerializeField] private int TimeToUnlock;
 
@@ -14,6 +15,7 @@ public class AbilityCooldown : MonoBehaviour
     [SerializeField] private PlayerShoot playerShoot;
 
     [SerializeField] private float maxCD;
+    [SerializeField][TextArea] private string onUnlockText;
     private void Awake()
     {
         icon.enabled = false;
@@ -33,7 +35,7 @@ public class AbilityCooldown : MonoBehaviour
     {
         if (TimeToUnlock==timeElapsed)
         {
-            print($"Time to unlock {TimeToUnlock}, timeelapsed: {timeElapsed}");
+            notif.UnlockAbilityNotif(onUnlockText);
 
             icon.enabled = true;
             abilityCooldown.enabled = true;

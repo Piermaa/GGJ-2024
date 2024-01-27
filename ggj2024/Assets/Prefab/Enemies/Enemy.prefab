@@ -389,6 +389,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8754542712651852450}
     m_Modifications:
+    - target: {fileID: 677803607482342761, guid: d34346a19476b9340acc1935860481a8, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1168051055
+      objectReference: {fileID: 0}
     - target: {fileID: 1378538810563187260, guid: d34346a19476b9340acc1935860481a8, type: 3}
       propertyPath: m_Name
       value: DamageNotif
@@ -400,6 +404,22 @@ PrefabInstance:
     - target: {fileID: 1799681798222025180, guid: d34346a19476b9340acc1935860481a8, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133571570996563549, guid: d34346a19476b9340acc1935860481a8, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6267296334294745349, guid: d34346a19476b9340acc1935860481a8, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.2216981
+      objectReference: {fileID: 0}
+    - target: {fileID: 6267296334294745349, guid: d34346a19476b9340acc1935860481a8, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.2216981
+      objectReference: {fileID: 0}
+    - target: {fileID: 6267296334294745349, guid: d34346a19476b9340acc1935860481a8, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4281940479
       objectReference: {fileID: 0}
     - target: {fileID: 7970412195173050846, guid: d34346a19476b9340acc1935860481a8, type: 3}
       propertyPath: m_Pivot.x
