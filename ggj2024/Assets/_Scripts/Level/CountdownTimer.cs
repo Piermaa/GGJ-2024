@@ -2,9 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
 
 public class CountdownTimer : MonoBehaviour
 {
+    public static event Action<int> OnTimeElapsed;
+
     [SerializeField] float startingTime;
     [SerializeField] TextMeshProUGUI timerText;
 
