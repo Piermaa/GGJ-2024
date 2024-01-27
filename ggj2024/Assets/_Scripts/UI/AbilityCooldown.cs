@@ -1,18 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AbilityCooldown : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private CountdownTimer _countdownTimer;
+    [SerializeField] private int TimeToUnlock;
+
+    [SerializeField] private Image icon;
+    [SerializeField] private Image abilityCooldown;
+
+    [SerializeField] private PlayerShoot playerShoot;
+
+    private float maxCD;
+    private void Awake()
     {
-        
+        maxCD = playerShoot.AttackCD;
+        CountdownTimer.OnTimeElapsed += UnlockAbility;
+    }
+    private void Update()
+    {
+        abilityCooldown.fillAmount = (float) playerShoot.AttackCDTimer / maxCD;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void UnlockAbility(int timeElapsed)
     {
-        
+        if (TimeToUnlock==timeElapsed)
+        {
+            icon.enabled = true;
+            abilityCooldown.enabled = true;
+            playerShoot.enabled = true;
+        }
     }
 }
