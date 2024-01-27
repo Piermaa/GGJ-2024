@@ -17,7 +17,7 @@ public class CountdownTimer : MonoBehaviour
     private float eventTimer;
     private float currentTime;
     private int minutes;
-    private int seconds;    
+    private int seconds;
 
     private void Start()
     {
@@ -41,7 +41,7 @@ public class CountdownTimer : MonoBehaviour
 
         if (eventTimer >= timeBetweenEvents)
         {
-            OnTimeElapsed?.Invoke((int)currentTime);
+            OnTimeElapsed?.Invoke((int)(startingTime - currentTime +1));
             eventTimer = 0;
         }
     }
