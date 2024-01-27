@@ -174,16 +174,27 @@ MonoBehaviour:
     DialogueLines:
     - Oh god, So much better
   - Tag: MarioBrosStar
-    EventTag: 
+    EventTag: MarioBrosStarFinish
     Written: 0
     DialogueLines:
     - Here we go!
     - WOO-HOO
-  - Tag: MarioBrosMushroom
+  - Tag: MarioBrosStarFinish
     EventTag: 
     Written: 0
     DialogueLines:
+    - THAT
+    - WAS
+    - AMAZING!!
+  - Tag: MarioBrosMushroom
+    EventTag: MarioBrosMushroomFinish
+    Written: 0
+    DialogueLines:
     - Mamma Mia! i fell dizy
+  - Tag: MarioBrosMushroomFinish
+    EventTag: 
+    Written: 0
+    DialogueLines:
     - 'Did Mario really eat this garbage? '
   - Tag: SpaceInvaders
     EventTag: 
@@ -192,7 +203,7 @@ MonoBehaviour:
     - This is so old. Not even new stuff are in this game
     - Oh, there you are, the four pixel alien, so fun developers!
   - Tag: Pacman
-    EventTag: 
+    EventTag: PacmanFinish
     Written: 0
     DialogueLines:
     - Excuse me what the actual fuck, that is Pac-Man?
@@ -206,6 +217,52 @@ MonoBehaviour:
     Written: 0
     DialogueLines:
     - "Was that Spanish? It sounds like\u2026 I don't know, oh shit"
+  - Tag: SteamAchivement
+    EventTag: 
+    Written: 0
+    DialogueLines:
+    - ARE YOU KIDDING ME?!
+  - Tag: DialogueFinal
+    EventTag: Finish
+    Written: 0
+    DialogueLines:
+    - eh? that 's everything?
+  - Tag: Dialogue1
+    EventTag: Dialogue1Finish
+    Written: 0
+    DialogueLines:
+    - 'I just want to go home, and play some quality video games. '
+  - Tag: Dialogue2
+    EventTag: Dialogue2Finish
+    Written: 0
+    DialogueLines:
+    - "eh? the developers didn\u2019t even bother about being an ip ripoff"
+  - Tag: Dialogue3
+    EventTag: Dialogue3Finish
+    Written: 0
+    DialogueLines:
+    - 'JUST LET ME GO ALREADY AHHHHHHHHH '
+  - Tag: Dialogue4
+    EventTag: Dialogue4Finish
+    Written: 0
+    DialogueLines:
+    - This is not just a reference, THIS IS A COMPLETE THEFT.
+  - Tag: Dialogue5
+    EventTag: Dialogue5Finish
+    Written: 0
+    DialogueLines:
+    - "HEEEEEEEELP\u2026"
+    - "ANYONE, CAN HEAR MEEEE\u2026 "
+  - Tag: Dialogue6
+    EventTag: 
+    Written: 0
+    DialogueLines:
+    - WHY THIS GAME IS SO BAAAAAAD
+  - Tag: Dialogue7
+    EventTag: Dialogue7Finish
+    Written: 0
+    DialogueLines:
+    - Who even plays this game?
 --- !u!114 &7194112215823669386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,18 +275,62 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc2bd33b2f0e25d4a8e24955c5a247cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPlayer: 0
+  isPlayer: 1
   _dialogue: {fileID: 2403918081575840450}
   _dialogues:
-  - Tag: ZeldaFinish
-    EventTag: 
-    Written: 0
-    DialogueLines:
-    - xdxdxdxdxdxdxd
   - Tag: 
     EventTag: 
     Written: 0
     DialogueLines: []
+  - Tag: DialogueIntro
+    EventTag: 
+    Written: 0
+    DialogueLines:
+    - "Now go\u2026"
+    - just go and do your main character stuff or whatever..
+  - Tag: Dialogue1Finish
+    EventTag: 
+    Written: 0
+    DialogueLines:
+    - For the love of God, can you shut up and do main character things?
+  - Tag: Dialogue2Finish
+    EventTag: 
+    Written: 0
+    DialogueLines:
+    - SORRY for not fulfilling your expectations little shit
+    - "but you have to continue\u2026"
+  - Tag: Dialogue3Finish
+    EventTag: 
+    Written: 0
+    DialogueLines:
+    - "OH PLEASE JUST CONTINUE AND DON\u2019T BE A CRYBABY"
+  - Tag: Dialogue4Finish
+    EventTag: 
+    Written: 0
+    DialogueLines:
+    - We didn't have that much budget.
+  - Tag: PacmanFinish
+    EventTag: 
+    Written: 0
+    DialogueLines:
+    - Ignore that, just continue surviving.
+  - Tag: NoTime
+    EventTag: 
+    Written: 0
+    DialogueLines:
+    - "Tik tok tik tok, the time is running out\u2026"
+  - Tag: Dialogue7Finish
+    EventTag: 
+    Written: 0
+    DialogueLines:
+    - 
+    - For the love of God, can you shut up and do main character things?
+  - Tag: Finish
+    EventTag: 
+    Written: 0
+    DialogueLines:
+    - Now go and be free
+    - "touch some grass or something\u2026"
 --- !u!1 &3652870315823980776
 GameObject:
   m_ObjectHideFlags: 0
@@ -382,6 +483,7 @@ MonoBehaviour:
   _timeBetweenLines: 1
   _playerSpeak: {fileID: 0}
   _narratorSpeak: {fileID: 0}
+  isPlayer: 0
 --- !u!1 &5575128363234707899
 GameObject:
   m_ObjectHideFlags: 0
@@ -567,3 +669,4 @@ MonoBehaviour:
   _timeBetweenLines: 1
   _playerSpeak: {fileID: 8300000, guid: efbb001e66a715c4b9fee33e1bdb8bd5, type: 3}
   _narratorSpeak: {fileID: 8300000, guid: c0494c0a5a800d6469b2a03d570b06e3, type: 3}
+  isPlayer: 0
