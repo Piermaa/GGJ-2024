@@ -598,7 +598,7 @@ MonoBehaviour:
   StarPickUp: 0
   PackmanPickUp: 0
   durationEffectTimer: 2
-  trail: {fileID: 0}
+  trail: {fileID: 8095267498338689468}
 --- !u!96 &8095267498338689468
 TrailRenderer:
   serializedVersion: 3
