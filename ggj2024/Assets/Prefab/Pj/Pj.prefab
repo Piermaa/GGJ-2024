@@ -234,11 +234,11 @@ GameObject:
   - component: {fileID: 7988522401684516040}
   - component: {fileID: 6949664469506525694}
   - component: {fileID: 689672237237402618}
-  - component: {fileID: 4336883333873556730}
-  - component: {fileID: 8011295596932075096}
   - component: {fileID: 1568100710680796049}
   - component: {fileID: 4626860575285513350}
   - component: {fileID: 3676543330160329699}
+  - component: {fileID: 4336883333873556730}
+  - component: {fileID: 8011295596932075096}
   - component: {fileID: 8095267498338689468}
   m_Layer: 3
   m_Name: Pj
@@ -428,6 +428,60 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerRef: {fileID: 0}
+--- !u!114 &1568100710680796049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6732234323180982734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84fe04094a08d764eb54d4338d30d795, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseButton: 0
+  rebotinPrefab: {fileID: 3741207102647645952, guid: ed243a3ef7f3b3c40a7f7db68c734b38, type: 3}
+  attackCooldown: 0.1
+--- !u!114 &4626860575285513350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6732234323180982734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84fe04094a08d764eb54d4338d30d795, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseButton: 1
+  rebotinPrefab: {fileID: 6906326865816838993, guid: 63fe039b5d95c6e478b4ef70aa82a1b1, type: 3}
+  attackCooldown: 3
+--- !u!114 &3676543330160329699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6732234323180982734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57f5059735ca59749b3a0b1a64392d39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _characterSprite: {fileID: 7193537992649511525}
+  _flashingWhiteMaterial: {fileID: 2100000, guid: da96aa490a6293645b534b7ec16841e5, type: 2}
+  takingDamageAudioClip: {fileID: 0}
+  _damageNotification: {fileID: 905868348599660868}
+  resetMaterialTime: 0.1
+  StartCountDown: 0
+  MushroomPickUp: 0
+  SamusPickUp: 0
+  StarPickUp: 0
+  PackmanPickUp: 0
+  durationEffectTimer: 2
+  trail: {fileID: 8095267498338689468}
 --- !u!95 &4336883333873556730
 Animator:
   serializedVersion: 5
@@ -545,60 +599,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1568100710680796049
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6732234323180982734}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84fe04094a08d764eb54d4338d30d795, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mouseButton: 0
-  rebotinPrefab: {fileID: 3741207102647645952, guid: ed243a3ef7f3b3c40a7f7db68c734b38, type: 3}
-  attackCooldown: 0.1
---- !u!114 &4626860575285513350
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6732234323180982734}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84fe04094a08d764eb54d4338d30d795, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mouseButton: 1
-  rebotinPrefab: {fileID: 6906326865816838993, guid: 63fe039b5d95c6e478b4ef70aa82a1b1, type: 3}
-  attackCooldown: 3
---- !u!114 &3676543330160329699
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6732234323180982734}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57f5059735ca59749b3a0b1a64392d39, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _characterSprite: {fileID: 7193537992649511525}
-  _flashingWhiteMaterial: {fileID: 2100000, guid: da96aa490a6293645b534b7ec16841e5, type: 2}
-  takingDamageAudioClip: {fileID: 0}
-  _damageNotification: {fileID: 905868348599660868}
-  resetMaterialTime: 0.1
-  StartCountDown: 0
-  MushroomPickUp: 0
-  SamusPickUp: 1
-  StarPickUp: 0
-  PackmanPickUp: 0
-  durationEffectTimer: 2
-  trail: {fileID: 8095267498338689468}
 --- !u!96 &8095267498338689468
 TrailRenderer:
   serializedVersion: 3

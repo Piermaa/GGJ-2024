@@ -9,20 +9,32 @@ public class PlayerManager : BaseCharacter
     public bool MushroomPickUp;
     public bool SamusPickUp;
     public bool StarPickUp;
-    public bool PackmanPickUp;
+    public bool PacmanPickUp;
 
-    [SerializeField] private float durationEffectTimer;
-    [SerializeField] private TrailRenderer trail;
+    public bool playerCantAttack;
+
+    [SerializeField] private float durationStarEffect;
+    [SerializeField] private float durationSamusEffect;
+    [SerializeField] private float durationPacmanEffect;
+    [SerializeField] private float durationMushroomEffect;
+    
+    private EnemySpawner spawnerRef;
 
     private float countDown;
     private PlayerMovement playerMov;
+    private TrailRenderer trail;
+    private Animator anim;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        spawnerRef = GameObject.Find("EnemySpawner").GetComponent<EnemySpawner>();
         playerMov = GetComponent<PlayerMovement>();
+        anim = GetComponent<Animator>();
+        trail = GetComponent<TrailRenderer>();  
         trail.widthMultiplier = 0.0f;
+        playerCantAttack = false;
     }
 
     // Update is called once per frame
@@ -35,8 +47,7 @@ public class PlayerManager : BaseCharacter
 
         if (countDown < 0.1f)
         {
-            countDown = durationEffectTimer;
-            StartCountDown = false;
+            countDown = 0;
             BackToNormal();
         }
     }
@@ -45,31 +56,37 @@ public class PlayerManager : BaseCharacter
     {
         if (MushroomPickUp)
         {
+            countDown = durationMushroomEffect;
             transform.localScale *= 5;
             playerMov.speed = 2;
         }
 
         if (SamusPickUp)
         {
+
             //Sacar UI del casco
         }
 
         if (StarPickUp)
         {
+            countDown = durationStarEffect;
             playerMov.speed = 20;
             trail.widthMultiplier = .2f;
         }
 
-        if (PackmanPickUp)
+        if (PacmanPickUp)
         {
-            // Volver el sprite a la normalidad
-            // Hacer que los enemigos se vean normal
+            playerCantAttack = true;
+            spawnerRef.pacmanMode = true;
+            countDown = durationPacmanEffect;
+            anim.SetBool("PacmanTime", true);
         }
     }
 
     private void BackToNormal()
     {
-        if(MushroomPickUp)
+        StartCountDown = false;
+        if (MushroomPickUp)
         {
             transform.localScale = new Vector3(1, 1, 1);
             playerMov.speed = 5;
@@ -88,30 +105,12 @@ public class PlayerManager : BaseCharacter
             trail.widthMultiplier = 0.0f;
         }
 
-        if(PackmanPickUp)
+        if(PacmanPickUp)
         {
-            // Volver el sprite a la normalidad
-            // Hacer que los enemigos se vean normal
+            playerCantAttack = false;
+            spawnerRef.pacmanMode = false;
+            anim.SetBool("PacmanTime", false);
         }
-
-    }
-
-    private void MushroomActive()
-    {
-
-    }
-
-    private void SamusActive()
-    {
-
-    }
-
-    private void StarActive()
-    {
-
-    }
-    private void PackmanActive()
-    {
 
     }
 }
