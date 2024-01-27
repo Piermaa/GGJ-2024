@@ -111390,4 +111390,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: cdf8801e81d05d149ac589cebd5e1dd8, type: 2}
     - {fileID: 11400000, guid: 80d878f99cb4c7943b5c46bf5c1a6785, type: 2}
     - {fileID: 11400000, guid: 780dbc86f9d96cb4ea6eb80cedc5297f, type: 2}
+  - Category: Pacman
+    tiles:
+    - {fileID: 11400000, guid: bfa8d4b7e8ec1fd4f80d36219a6eac5c, type: 2}
   defaultCategory: Grass
