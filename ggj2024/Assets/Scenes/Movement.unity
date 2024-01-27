@@ -144,11 +144,11 @@ GameObject:
   m_Component:
   - component: {fileID: 189495012}
   - component: {fileID: 189495011}
-  - component: {fileID: 189495010}
   - component: {fileID: 189495014}
+  - component: {fileID: 189495010}
   m_Layer: 0
   m_Name: Mushroom
-  m_TagString: Untagged
+  m_TagString: Pickable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -917,7 +917,7 @@ GameObject:
   - component: {fileID: 2061000925}
   m_Layer: 0
   m_Name: Star
-  m_TagString: Untagged
+  m_TagString: Pickable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1106,6 +1106,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3676543330160329699, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: trail
+      value: 
+      objectReference: {fileID: 6411430052701115482}
     - target: {fileID: 4336883333873556730, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: m_Controller
       value: 
@@ -1137,7 +1141,7 @@ PrefabInstance:
     - target: {fileID: 6920892453583051603, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: trail
       value: 
-      objectReference: {fileID: 6411430052701115483}
+      objectReference: {fileID: 0}
     - target: {fileID: 6949664469506525694, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: speed
       value: 5
@@ -1197,9 +1201,9 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
---- !u!96 &6411430052701115483 stripped
+--- !u!96 &6411430052701115482 stripped
 TrailRenderer:
-  m_CorrespondingSourceObject: {fileID: 7510997956430771058, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+  m_CorrespondingSourceObject: {fileID: 8095267498338689468, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
   m_PrefabInstance: {fileID: 6411430052701115469}
   m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807

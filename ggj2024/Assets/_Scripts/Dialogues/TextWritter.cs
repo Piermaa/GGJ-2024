@@ -15,6 +15,7 @@ public class TextWritter : MonoBehaviour
     [SerializeField] private float _timeBetweenLines = 1;
     [SerializeField] private AudioClip _playerSpeak;
     [SerializeField] private AudioClip _narratorSpeak;
+    [SerializeField] private bool isPlayer;
 
     private AudioSource speakSource;
     private AudioClip currettSpeakClip;
@@ -24,8 +25,10 @@ public class TextWritter : MonoBehaviour
     private int _dialogueIndex;
     private int _linesIndex;
 
+
     void Start()
     {
+        speakSource = GetComponent<AudioSource>();
         textComponent.text = string.Empty;
     }
 
@@ -86,7 +89,8 @@ public class TextWritter : MonoBehaviour
         else
         {
             textComponent.text = string.Empty;
-            OnDialogueFinish?.Invoke(currentDialogue.Tag);
+            isWritting = false;
+            OnDialogueFinish?.Invoke(currentDialogue.EventTag);
         }
     }
 
