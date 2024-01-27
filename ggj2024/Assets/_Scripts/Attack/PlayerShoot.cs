@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerShoot : MonoBehaviour
 {
-    public float AttackCDTimer => attackCooldown;
+    public float AttackCDTimer => attackCooldownTimer;
     public float AttackCD => attackCooldown;
 
     [SerializeField] private int mouseButton;

@@ -831,7 +831,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3292966456544688941, guid: 2410449ed70542840ac92d9bcb9b54c2, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3658749744320039020, guid: 2410449ed70542840ac92d9bcb9b54c2, type: 3}
       propertyPath: TimeToUnlock
@@ -847,7 +847,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9013827956150499654, guid: 2410449ed70542840ac92d9bcb9b54c2, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9013827956150499654, guid: 2410449ed70542840ac92d9bcb9b54c2, type: 3}
+      propertyPath: m_FillAmount
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
