@@ -43,9 +43,10 @@ public class CountdownTimer : MonoBehaviour
 
     private void SecondElapsed()
     {
-        secondsElapsed+=timeBetweenEvents;
+        eventTimer = 0;
         if (seconds != 0 && (secondsElapsed % timeBetweenEvents) == 0)
         {
+            secondsElapsed += timeBetweenEvents;
             OnTimeElapsed?.Invoke(secondsElapsed);
         }
     }

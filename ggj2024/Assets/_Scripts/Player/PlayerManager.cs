@@ -38,8 +38,10 @@ public class PlayerManager : BaseCharacter
     }
 
     // Update is called once per frame
-    void Update()
+    protected override void Update()
     {
+        base.Update();
+
         if (StartCountDown)
         {
             countDown -= Time.deltaTime;

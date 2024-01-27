@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 1925607558028804626}
   - component: {fileID: 5038097887554896705}
   - component: {fileID: 2323702569386485995}
+  - component: {fileID: 8685283181760727319}
+  - component: {fileID: 5161782752893634312}
   m_Layer: 0
   m_Name: Star
   m_TagString: Pickable
@@ -74,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: -2031068014, guid: bd4869a10aa895f42bbcca54c9a536f6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -118,7 +120,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.0089748055}
+  m_Offset: {x: -0.0000012218952, y: -0.43516243}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -129,7 +131,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.64, y: 0.70205045}
+  m_Size: {x: 1.0578301, y: 2.055817}
   m_EdgeRadius: 0
 --- !u!114 &2323702569386485995
 MonoBehaviour:
@@ -141,5 +143,31 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 90df08e7e0937a64f81c13f5090cb970, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8685283181760727319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2903978706285141869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11a366630efe56949a69915723342c6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueTag: MarioBrosStar
+  isPlayerDialogue: 1
+--- !u!114 &5161782752893634312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2903978706285141869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aae1c4d4bd080604eab28047ea761bd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

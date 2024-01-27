@@ -36,7 +36,7 @@ public class BaseCharacter : MonoBehaviour, IDamageable
         takingDamageAudioSource = GetComponent<AudioSource>();
     }
 
-    void Update()
+    protected virtual void Update()
     {
         if (_resetMaterialTimer > 0)
         {
