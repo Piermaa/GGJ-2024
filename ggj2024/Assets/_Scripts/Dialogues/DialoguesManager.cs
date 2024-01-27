@@ -19,7 +19,7 @@ public class DialoguesManager : MonoBehaviour
     [SerializeField] private bool isPlayer;
     [SerializeField] private TextWritter _dialogue;
     [SerializeField] private Dialogue[] _dialogues;
-    private Dictionary<string,Dialogue> _dialoguesDictionary= new();
+    private static Dictionary<string,Dialogue> _dialoguesDictionary= new();
 
     private void Awake()
     {
