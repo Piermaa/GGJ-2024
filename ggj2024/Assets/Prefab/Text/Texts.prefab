@@ -118,6 +118,8 @@ MonoBehaviour:
   textComponent: {fileID: 1095651613492559752}
   _textSpeed: 0.1
   _timeBetweenLines: 1
+  _playerSpeak: {fileID: 8300000, guid: efbb001e66a715c4b9fee33e1bdb8bd5, type: 3}
+  _narratorSpeak: {fileID: 8300000, guid: c0494c0a5a800d6469b2a03d570b06e3, type: 3}
 --- !u!1 &721316092961207104
 GameObject:
   m_ObjectHideFlags: 0
@@ -162,50 +164,61 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc2bd33b2f0e25d4a8e24955c5a247cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlayer: 0
   _dialogue: {fileID: 2642601997701006684}
   _dialogues:
   - Tag: Sword
+    EventTag: 
     Written: 0
     DialogueLines:
     - this is a sword
     - yes it is
   - Tag: Zelda
+    EventTag: 
     Written: 0
     DialogueLines:
     - Well...
     - "I think I have seen this sword in another game\u2026"
   - Tag: MetroidHelmet
+    EventTag: 
     Written: 0
     DialogueLines:
     - Damn, I can't see anything with this
   - Tag: MetroidHelmetOff
+    EventTag: 
     Written: 0
     DialogueLines:
     - Oh god, So much better
   - Tag: MarioBrosStar
+    EventTag: 
     Written: 0
     DialogueLines:
     - Here we go!
     - WOO-HOO
   - Tag: MarioBrosMushroom
+    EventTag: 
     Written: 0
     DialogueLines:
     - Mamma Mia! i fell dizy
     - 'Did Mario really eat this garbage? '
   - Tag: SpaceInvaders
+    EventTag: 
     Written: 0
     DialogueLines:
     - This is so old. Not even new stuff are in this game
     - Oh, there you are, the four pixel alien, so fun developers!
   - Tag: Pacman
+    EventTag: 
     Written: 0
     DialogueLines:
     - Excuse me what the actual fuck, that is Pac-Man?
   - Tag: ResidentEvil
+    EventTag: 
     Written: 1
     DialogueLines:
     - "Was that Spanish? It sounds like\u2026 I don't know, oh shit"
   - Tag: HotlineMiami
+    EventTag: 
     Written: 0
     DialogueLines:
     - "Was that Spanish? It sounds like\u2026 I don't know, oh shit"
