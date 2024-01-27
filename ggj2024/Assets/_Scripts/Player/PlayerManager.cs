@@ -45,7 +45,7 @@ public class PlayerManager : BaseCharacter
     {
         if (MushroomPickUp)
         {
-            playerMov.transform.localScale *= 5;
+            transform.localScale *= 5;
             playerMov.speed = 2;
         }
 
@@ -71,7 +71,7 @@ public class PlayerManager : BaseCharacter
     {
         if(MushroomPickUp)
         {
-            playerMov.transform.localScale = new Vector3(1, 1, 1);
+            transform.localScale = new Vector3(1, 1, 1);
             playerMov.speed = 5;
             MushroomPickUp = false;
         }
