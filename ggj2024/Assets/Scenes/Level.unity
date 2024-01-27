@@ -30917,8 +30917,24 @@ PrefabInstance:
       value: 8.434326
       objectReference: {fileID: 0}
     - target: {fileID: 3676543330160329699, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: durationStarEffect
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3676543330160329699, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: durationEffectTimer
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3676543330160329699, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: durationSamusEffect
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3676543330160329699, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: durationPacmanEffect
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3676543330160329699, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: durationMushroomEffect
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4340988640079152288, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: m_Pivot.x
