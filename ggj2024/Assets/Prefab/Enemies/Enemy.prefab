@@ -120,6 +120,7 @@ MonoBehaviour:
   _characterSprite: {fileID: 8707049190763397646}
   _flashingWhiteMaterial: {fileID: 2100000, guid: da96aa490a6293645b534b7ec16841e5, type: 2}
   takingDamageAudioClip: {fileID: 8300000, guid: eeeba0dda8e3af941b1b5e4e907c8083, type: 3}
+  _dieAudioClip: {fileID: 8300000, guid: cfaf578bcaa0f85418f6521fd3ab61dc, type: 3}
   _damageNotification: {fileID: 5056466103016932401}
   resetMaterialTime: 0.1
   stats: {fileID: 11400000, guid: 806aa300041e35c49b1e401c2dfe88cb, type: 2}

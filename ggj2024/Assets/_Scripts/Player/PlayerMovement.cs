@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float timeBetweenStepSounds;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Animator anim;
+    private SpriteRenderer _spriteRenderer;
 
     private Dictionary<string, AudioClip[]> soundsDictionary=new();
     private AudioClip[] currentStepSound;
@@ -27,7 +28,11 @@ public class PlayerMovement : MonoBehaviour
     private float hor;
     private float ver;
 
-    
+    private void Awake()
+    {
+        _spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
     void Start()
     {
         foreach (var clip in walkClips)
@@ -48,10 +53,12 @@ public class PlayerMovement : MonoBehaviour
 
         // rb.velocity = (new Vector2(hor, ver)).normalized * speed;
 
-        if (hor < 0)
-            transform.rotation = Quaternion.Euler(new Vector3 (0, 180, 0));
-        else if(hor > 0)
-            transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
+        //if (hor < 0)
+        //    transform.rotation = Quaternion.Euler(new Vector3 (0, 180, 0));
+        //else if(hor > 0)
+        //    transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
+
+        _spriteRenderer.flipX = (hor < 0);
 
         if (hor != 0 || ver != 0)
             anim.SetBool("Walk", true);

@@ -19,6 +19,7 @@ public class BaseCharacter : MonoBehaviour, IDamageable
     [SerializeField] private SpriteRenderer _characterSprite;
     [SerializeField] private Material _flashingWhiteMaterial;
     [SerializeField] private AudioClip takingDamageAudioClip;
+    [SerializeField] private AudioClip _dieAudioClip;
     [SerializeField] private DamageNotification _damageNotification;
 
     [SerializeField] private float resetMaterialTime;
@@ -60,7 +61,7 @@ public class BaseCharacter : MonoBehaviour, IDamageable
 
         takingDamageAudioSource.PlayOneShot(takingDamageAudioClip);
 
-        if (_currentHealth < 0) 
+        if (_currentHealth <= 0) 
         {
             Death();
         }
