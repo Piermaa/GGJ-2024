@@ -5,9 +5,16 @@ using UnityEngine;
 public class DialogueStarter : MonoBehaviour
 {
     [SerializeField] private string dialogueTag;
-
+    [SerializeField] private bool isPlayerDialogue=true;
     public void StartDialogue()
     {
-        DialoguesManager.Instance.SetDialogue(dialogueTag);
+        if (isPlayerDialogue)
+        {
+            DialoguesManager.PlayerInstance.SetDialogue(dialogueTag);
+        }
+        else
+        {
+            DialoguesManager.NarratorInstance.SetDialogue(dialogueTag);
+        }
     }
 }

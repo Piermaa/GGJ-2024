@@ -12,6 +12,7 @@ public class PlayerManager : BaseCharacter
     public bool PackmanPickUp;
 
     [SerializeField] private float durationEffectTimer;
+    [SerializeField] private TrailRenderer trail;
 
     private float countDown;
     private PlayerMovement playerMov;
@@ -21,6 +22,7 @@ public class PlayerManager : BaseCharacter
     void Start()
     {
         playerMov = GetComponent<PlayerMovement>();
+        trail.widthMultiplier = 0.0f;
     }
 
     // Update is called once per frame
@@ -55,6 +57,7 @@ public class PlayerManager : BaseCharacter
         if (StarPickUp)
         {
             playerMov.speed = 20;
+            trail.widthMultiplier = .2f;
         }
 
         if (PackmanPickUp)
@@ -70,6 +73,7 @@ public class PlayerManager : BaseCharacter
         {
             playerMov.transform.localScale = new Vector3(1, 1, 1);
             playerMov.speed = 5;
+            MushroomPickUp = false;
         }
             
         if(SamusPickUp)
@@ -80,6 +84,8 @@ public class PlayerManager : BaseCharacter
         if(StarPickUp)
         {
             playerMov.speed = 5;
+            StarPickUp = false;
+            trail.widthMultiplier = 0.0f;
         }
 
         if(PackmanPickUp)

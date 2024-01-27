@@ -13,5 +13,7 @@ public class StarPickable : OnPlayerTriggerEnter
 
         pj.ActivePickUp();
 
+        Destroy(gameObject);
+
     }
 }

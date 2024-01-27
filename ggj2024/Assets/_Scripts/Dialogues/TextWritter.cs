@@ -1,14 +1,24 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class Dialogues : MonoBehaviour
+public class TextWritter : MonoBehaviour
 {
+    public static Action<string> OnDialogueFinish;
+
+    private bool isWritting = false;
+
     [SerializeField] private TextMeshProUGUI textComponent;
     [SerializeField] private float _textSpeed = 0.1f;
     [SerializeField] private float _timeBetweenLines = 1;
+    [SerializeField] private AudioClip _playerSpeak;
+    [SerializeField] private AudioClip _narratorSpeak;
 
+    private AudioSource speakSource;
+    private AudioClip currettSpeakClip;
+    private Dialogue currentDialogue;
     private string[] currentLines;
 
     private int _dialogueIndex;
@@ -32,6 +42,16 @@ public class Dialogues : MonoBehaviour
                 StopAllCoroutines();
                 textComponent.text = currentLines[_linesIndex];
             }
+        }
+
+        if (isWritting && speakSource.isPlaying)
+        {
+            speakSource.pitch = UnityEngine.Random.Range(.95f,1.1f);
+            speakSource.Play();
+        }
+        else
+        {
+            speakSource.Stop();
         }
     }
 
@@ -66,6 +86,7 @@ public class Dialogues : MonoBehaviour
         else
         {
             textComponent.text = string.Empty;
+            OnDialogueFinish?.Invoke(currentDialogue.Tag);
         }
     }
 
@@ -77,10 +98,19 @@ public class Dialogues : MonoBehaviour
         StartDialogue();
     }
 
-    public void SetDialogue(string[] newDialogue)
+    public bool SetDialogue(Dialogue newDialogue, bool isPlayer)
     {
-        currentLines = newDialogue;
-        StartDialogue();
+        if (!isWritting)
+        {
+            currentDialogue = newDialogue;
+            currentLines = newDialogue.DialogueLines;
+            StartDialogue();
+            isWritting = true;
+
+            speakSource.clip = isPlayer ? _playerSpeak : _narratorSpeak;
+        }
+
+        return isWritting;
     }
 
 }

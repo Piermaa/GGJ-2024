@@ -48,8 +48,8 @@ MonoBehaviour:
   - {fileID: 8923559383968321671, guid: eb0f7f4d1139d23499b8d3c5a43f6389, type: 3}
   - {fileID: 6043514728215692642, guid: c114e792464e0a5408dcf9fc24c57d57, type: 3}
   - {fileID: 4914480912758617441, guid: 51132eb7038e2f1419bf1ed2e8c4ecb1, type: 3}
-  heightLimits: {x: -18.4, y: 24.5}
-  widthLimits: {x: -40.5, y: 21.1}
+  heightLimits: {x: -23.2, y: 39.7}
+  widthLimits: {x: -45.4, y: 17}
   playerTransform: {fileID: 0}
   enemiesPerSpawn: 3
   warmUpTime: 0
