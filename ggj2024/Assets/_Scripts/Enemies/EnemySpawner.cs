@@ -11,10 +11,11 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private float warmUpTime, spawnRate;
     [SerializeField] private float enemyHalfHeight=50;
 
-    private bool pacmanMode = false;
+    public bool pacmanMode = false;
     private float spawnTimer;
     private Camera mainCamera;
     private int difficulty=1;
+
     [Tooltip("Cada cuantos segs spawnea 1 enemigo")]
     private void Start()
     {

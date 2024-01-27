@@ -4,40 +4,46 @@ using UnityEngine;
 
 public class PlayerShoot : MonoBehaviour
 {
+    public float AttackCDTimer => attackCooldown;
+    public float AttackCD => attackCooldown;
+
     [SerializeField] private int mouseButton;
     [SerializeField] private GameObject rebotinPrefab;
     [SerializeField] private float attackCooldown=.1f;
 
+    private PlayerManager pjRef;
     private float attackCooldownTimer;
     private bool _canShootRebotin = true;
     private void Awake()
     {
         RebotinHit.OnDestroyBullet += ReloadRebotin;
+        pjRef = GetComponent<PlayerManager>();
     }
 
     private void Update()
     {
-
-        if (attackCooldownTimer > 0)
+        if(!pjRef.playerCantAttack)
         {
-            attackCooldownTimer -= Time.deltaTime;
-        }
-        else
-        {
-            if (Input.GetMouseButton(mouseButton))
+            if (attackCooldownTimer > 0)
             {
-                if (mouseButton == 1 && _canShootRebotin)
+                attackCooldownTimer -= Time.deltaTime;
+            }
+            else
+            {
+                if (Input.GetMouseButton(mouseButton))
                 {
-                    _canShootRebotin = false;
-                    Shoot();
-                }
-                else
-                {
-                    Shoot();
+                    if (mouseButton == 1 && _canShootRebotin)
+                    {
+                        _canShootRebotin = false;
+                        Shoot();
+                    }
+                    else
+                    {
+                        Shoot();
+                    }
                 }
             }
         }
-
     }
 
     private void Shoot()
@@ -59,7 +65,6 @@ public class PlayerShoot : MonoBehaviour
 
     private void ReloadRebotin()
     {
-        attackCooldownTimer = attackCooldown;
         _canShootRebotin = true;
     }
 }
