@@ -90,7 +90,7 @@ public class TextWritter : MonoBehaviour
         {
             textComponent.text = string.Empty;
             isWritting = false;
-            OnDialogueFinish?.Invoke(currentDialogue.Tag);
+            OnDialogueFinish?.Invoke(currentDialogue.EventTag);
         }
     }
 
