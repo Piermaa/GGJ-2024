@@ -13,6 +13,7 @@ public class RebotinHit : MonoBehaviour, IProjectile
     [SerializeField] private int maxBounces;
     [SerializeField] private Vector2 _moveDirection;
     [SerializeField] private AudioClip shootSound;
+    [SerializeField] private AudioClip reboteSound;
 
     private int _bouncesCounter;
 
@@ -72,6 +73,7 @@ public class RebotinHit : MonoBehaviour, IProjectile
     private void Bounce()
     {
         _bouncesCounter++;
+        GetComponent<AudioSource>().PlayOneShot(reboteSound);
         if (_bouncesCounter==maxBounces)
         {
             Destroy(gameObject);
