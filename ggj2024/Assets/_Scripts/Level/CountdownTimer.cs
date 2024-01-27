@@ -41,7 +41,8 @@ public class CountdownTimer : MonoBehaviour
 
         if (eventTimer >= timeBetweenEvents)
         {
-            OnTimeElapsed?.Invoke((int)(startingTime - currentTime +1));
+            OnTimeElapsed?.Invoke((int)(startingTime - currentTime + 1));
+            print("elapsed: " + (int)(startingTime - currentTime + 1));
             eventTimer = 0;
         }
     }

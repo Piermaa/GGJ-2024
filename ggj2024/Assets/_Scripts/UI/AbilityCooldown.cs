@@ -30,6 +30,7 @@ public class AbilityCooldown : MonoBehaviour
         {
             icon.enabled = true;
             abilityCooldown.enabled = true;
+            playerShoot.enabled = true;
         }
     }
 }
