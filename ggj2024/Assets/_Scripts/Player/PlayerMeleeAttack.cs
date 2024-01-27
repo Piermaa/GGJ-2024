@@ -16,10 +16,13 @@ public class PlayerMeleeAttack : MonoBehaviour
 
     private Animator anim;
 
+    private PlayerManager pjRef;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        pjRef = GetComponentInParent<PlayerManager>();
         attackCooldown = 0;
         anim = GetComponentInParent<Animator>();
     }
@@ -27,7 +30,7 @@ public class PlayerMeleeAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(EnemyManager.Instance.EnemyList.Count > 0)
+        if(EnemyManager.Instance.EnemyList.Count > 0 && !pjRef.playerCantAttack)
         {
             AimToClosestEnemy(CloserEnemy());
         }
