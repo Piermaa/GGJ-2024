@@ -12,6 +12,7 @@ public class TileSounds : MonoBehaviour
 {
     [SerializeField] private TileCategory[] tileCategories;
     [SerializeField] private string defaultCategory = "GrassDefault";
+    private PlayerMovement playerMovement;
     private Tilemap tilemap;
     private Vector3Int location;
     private Transform playerTransform;
@@ -20,6 +21,7 @@ public class TileSounds : MonoBehaviour
     {
         tilemap = GetComponent<Tilemap>();
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+        playerMovement = playerTransform.GetComponent<PlayerMovement>();
     }
     // Start is called before the first frame update
     void Start()
@@ -29,10 +31,11 @@ public class TileSounds : MonoBehaviour
 
     private void SetTileSound()
     {
+        playerMovement.SetStepSounds(GetTileCategory());
      //   print(GetTileCategoty());
     }
 
-    private string GetTileCategoty()
+    private string GetTileCategory()
     {
         var currentTile = GetCurrentTile();
 

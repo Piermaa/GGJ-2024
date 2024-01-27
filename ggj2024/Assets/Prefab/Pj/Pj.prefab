@@ -404,13 +404,13 @@ MonoBehaviour:
   walkClips:
   - Tag: Grass
     StepClips:
-    - {fileID: 0}
+    - {fileID: 8300000, guid: 4222563bd4df6b64c82d9e5f13e7b9d4, type: 3}
   - Tag: Stones
     StepClips:
-    - {fileID: 0}
+    - {fileID: 8300000, guid: c74265f401a5d764baf8ce4d5e44fdd3, type: 3}
   - Tag: Pacman
     StepClips:
-    - {fileID: 0}
+    - {fileID: 8300000, guid: 43ee322b679ddae49a5c3698d8d16d9d, type: 3}
   timeBetweenStepSounds: 0.2
   rb: {fileID: 7522434255971589701}
   anim: {fileID: 4336883333873556730}
@@ -441,7 +441,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _characterSprite: {fileID: 7193537992649511525}
   _flashingWhiteMaterial: {fileID: 2100000, guid: da96aa490a6293645b534b7ec16841e5, type: 2}
-  takingDamageAudioClip: {fileID: 0}
+  takingDamageAudioClip: {fileID: 8300000, guid: c10e7a5123f59cc44b7277c5e7c0b17f, type: 3}
   _damageNotification: {fileID: 905868348599660868}
   resetMaterialTime: 0.1
 --- !u!95 &4336883333873556730
