@@ -442,7 +442,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseButton: 0
   rebotinPrefab: {fileID: 3741207102647645952, guid: ed243a3ef7f3b3c40a7f7db68c734b38, type: 3}
-  attackCooldown: 0.1
+  attackCooldown: 0.2
 --- !u!114 &4626860575285513350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -479,9 +479,12 @@ MonoBehaviour:
   MushroomPickUp: 0
   SamusPickUp: 0
   StarPickUp: 0
-  PackmanPickUp: 0
-  durationEffectTimer: 2
-  trail: {fileID: 8095267498338689468}
+  PacmanPickUp: 0
+  playerCantAttack: 0
+  durationStarEffect: 0
+  durationSamusEffect: 0
+  durationPacmanEffect: 0
+  durationMushroomEffect: 0
 --- !u!95 &4336883333873556730
 Animator:
   serializedVersion: 5

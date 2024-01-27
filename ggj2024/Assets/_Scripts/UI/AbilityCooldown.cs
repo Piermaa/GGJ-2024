@@ -21,7 +21,7 @@ public class AbilityCooldown : MonoBehaviour
     }
     private void Update()
     {
-        abilityCooldown.fillAmount = playerShoot.AttackCDTimer / maxCD;
+        abilityCooldown.fillAmount = (float) playerShoot.AttackCDTimer / maxCD;
     }
 
     private void UnlockAbility(int timeElapsed)

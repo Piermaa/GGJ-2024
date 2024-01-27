@@ -18,10 +18,11 @@ public class CountdownTimer : MonoBehaviour
     private float currentTime;
     private int minutes;
     private int seconds;
-
+    private int secondsElapsed;
     private void Start()
     {
         currentTime = startingTime;
+        InvokeRepeating("SecondElapsed", 0, timeBetweenEvents);
     }
 
     private void Update()
@@ -38,12 +39,14 @@ public class CountdownTimer : MonoBehaviour
         {
             SceneManagement.Instance.LoadScene(0);
         }
+    }
 
-        if (eventTimer >= timeBetweenEvents)
+    private void SecondElapsed()
+    {
+        secondsElapsed+=timeBetweenEvents;
+        if (secondsElapsed%timeBetweenEvents==0)
         {
-            OnTimeElapsed?.Invoke((int)(startingTime - currentTime + 1));
-            print("elapsed: " + (int)(startingTime - currentTime + 1));
-            eventTimer = 0;
+            OnTimeElapsed?.Invoke(secondsElapsed);
         }
     }
 }
