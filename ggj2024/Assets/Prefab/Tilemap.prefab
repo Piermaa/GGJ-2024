@@ -111394,3 +111394,4 @@ MonoBehaviour:
     tiles:
     - {fileID: 11400000, guid: bfa8d4b7e8ec1fd4f80d36219a6eac5c, type: 2}
   defaultCategory: Grass
+  checkTime: 0.02

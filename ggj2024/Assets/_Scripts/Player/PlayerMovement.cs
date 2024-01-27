@@ -22,16 +22,14 @@ public class PlayerMovement : MonoBehaviour
     private AudioClip[] currentStepSound;
     private AudioSource _source;
 
+    private Vector3 velocity;
     private float stepsTimer;
     private float hor;
     private float ver;
 
-    private Vector3 velocity;
     
-
     void Start()
     {
-
         foreach (var clip in walkClips)
         {
             soundsDictionary.Add(clip.Tag, clip.StepClips);
@@ -71,15 +69,20 @@ public class PlayerMovement : MonoBehaviour
 
     private void StepSounds()
     {
-        if (rb.velocity != Vector2.zero)
+        if (rb.velocity.magnitude > 2)
         {
-            stepsTimer = stepsTimer > 0 ? stepsTimer - Time.deltaTime : 0;
+            stepsTimer = stepsTimer > 0 ? stepsTimer - Time.fixedDeltaTime : 0;
 
-            if (stepsTimer<=0)
+            if (stepsTimer <= 0)
             {
-                _source.PlayOneShot(currentStepSound[Random.Range(0, currentStepSound.Length)]);
+                _source.clip = currentStepSound[Random.Range(0, currentStepSound.Length)];
+                _source.Play();
                 stepsTimer = timeBetweenStepSounds;
             }
+        }
+        else
+        {
+            _source.Stop();
         }
     }
 

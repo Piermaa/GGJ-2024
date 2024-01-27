@@ -10,13 +10,30 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private int enemiesPerSpawn;
     [SerializeField] private float warmUpTime, spawnRate;
     [SerializeField] private float enemyHalfHeight=50;
-    private Camera mainCamera;
 
+    private bool pacmanMode = false;
+    private float spawnTimer;
+    private Camera mainCamera;
+    private int difficulty=1;
     [Tooltip("Cada cuantos segs spawnea 1 enemigo")]
     private void Start()
     {
         mainCamera = Camera.main;
+        CountdownTimer.OnTimeElapsed += TimeElapsed;
         InvokeRepeating("SpawnEnemy", warmUpTime, spawnRate);
+    }
+
+    private void Update()
+    {
+        if (spawnTimer>0)
+        {
+            spawnTimer -= Time.deltaTime;
+        }
+        else
+        {
+            spawnTimer = spawnRate;
+            SpawnEnemy();
+        }
     }
 
     private void SpawnEnemy()
@@ -66,7 +83,12 @@ public class EnemySpawner : MonoBehaviour
 
     private GameObject GetRandomEnemy()
     {
-        int randomIndex = Random.Range(0, enemies.Length);
+        if (pacmanMode)
+        {
+            return enemies[3];
+        }
+
+        int randomIndex = Random.Range(0, (difficulty/3));
         return enemies[randomIndex];
     }
 
@@ -83,5 +105,21 @@ public class EnemySpawner : MonoBehaviour
         Gizmos.DrawLine(new Vector2(widthLimits.x, heightLimits.y), new Vector2(widthLimits.y, heightLimits.y));
         Gizmos.DrawLine(new Vector2(widthLimits.x, heightLimits.x), new Vector2(widthLimits.x, heightLimits.y));
         Gizmos.DrawLine(new Vector2(widthLimits.y, heightLimits.x), new Vector2(widthLimits.y, heightLimits.y));
+    }
+
+    private void TimeElapsed(int currentTime)
+    {
+        difficulty++;
+        spawnRate-=.4f;
+        enemiesPerSpawn++;
+    }
+
+    public void SpawnBurst(EnemyCharacter newEnemy, int amount)
+    {
+        for (int i = 0; i < amount; i++)
+        {
+            var enemy = Instantiate(newEnemy, GetEnemySpawnPos(), Quaternion.identity);
+            enemy.GetComponent<EnemyMovement>().SetPlayer(playerTransform);
+        }
     }
 }
