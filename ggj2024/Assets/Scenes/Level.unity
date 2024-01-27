@@ -20656,7 +20656,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 227.5, y: -183.7}
+  m_AnchoredPosition: {x: 757, y: -481.5}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1211402933
@@ -26332,13 +26332,50 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2903978706285141869, guid: 95478b4a2e587a14898c13f61d5ab2a4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1642387465}
+    - targetCorrespondingSourceObject: {fileID: 2903978706285141869, guid: 95478b4a2e587a14898c13f61d5ab2a4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1642387464}
   m_SourcePrefab: {fileID: 100100000, guid: 95478b4a2e587a14898c13f61d5ab2a4, type: 3}
 --- !u!4 &1642387462 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7053111263978428238, guid: 95478b4a2e587a14898c13f61d5ab2a4, type: 3}
   m_PrefabInstance: {fileID: 1642387461}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1642387463 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2903978706285141869, guid: 95478b4a2e587a14898c13f61d5ab2a4, type: 3}
+  m_PrefabInstance: {fileID: 1642387461}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1642387464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1642387463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aae1c4d4bd080604eab28047ea761bd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1642387465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1642387463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11a366630efe56949a69915723342c6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueTag: MarioBrosStar
+  isPlayerDialogue: 1
 --- !u!1 &1647528983
 GameObject:
   m_ObjectHideFlags: 0
@@ -27129,6 +27166,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41ea6afb203377e42995d7d016ea5907, type: 3}
+--- !u!1 &1708665655 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6718198717751346047, guid: d0185b6a6839bb24c860bee9640d1486, type: 3}
+  m_PrefabInstance: {fileID: 1865525905}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1709483529
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30000,13 +30042,45 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6718198717751346047, guid: d0185b6a6839bb24c860bee9640d1486, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1865525908}
+    - targetCorrespondingSourceObject: {fileID: 6718198717751346047, guid: d0185b6a6839bb24c860bee9640d1486, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1865525907}
   m_SourcePrefab: {fileID: 100100000, guid: d0185b6a6839bb24c860bee9640d1486, type: 3}
 --- !u!4 &1865525906 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1517420955617444204, guid: d0185b6a6839bb24c860bee9640d1486, type: 3}
   m_PrefabInstance: {fileID: 1865525905}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1865525907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1708665655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aae1c4d4bd080604eab28047ea761bd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1865525908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1708665655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11a366630efe56949a69915723342c6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueTag: MarioBrosMushroom
+  isPlayerDialogue: 1
 --- !u!4 &1866960916 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7947911505737750448, guid: d730038d263986f4dac93230e1dd62b0, type: 3}
