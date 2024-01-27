@@ -13405,7 +13405,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 463956399911499386, guid: 2235937e890ecf645a648fd17dd224f8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.43
+      value: 9.135
       objectReference: {fileID: 0}
     - target: {fileID: 463956399911499386, guid: 2235937e890ecf645a648fd17dd224f8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -24110,6 +24110,83 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2577585254963922481, guid: fb2df5b680b64b449a78162ebcd98e97, type: 3}
   m_PrefabInstance: {fileID: 1458995195}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1460208523
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2455916560020229070, guid: 0df883b0bf53f9f419b69ba4a8022e0c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455916560020229070, guid: 0df883b0bf53f9f419b69ba4a8022e0c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455916560020229070, guid: 0df883b0bf53f9f419b69ba4a8022e0c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455916560020229070, guid: 0df883b0bf53f9f419b69ba4a8022e0c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455916560020229070, guid: 0df883b0bf53f9f419b69ba4a8022e0c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455916560020229070, guid: 0df883b0bf53f9f419b69ba4a8022e0c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455916560020229070, guid: 0df883b0bf53f9f419b69ba4a8022e0c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.00000086426724
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455916560020229070, guid: 0df883b0bf53f9f419b69ba4a8022e0c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455916560020229070, guid: 0df883b0bf53f9f419b69ba4a8022e0c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455916560020229070, guid: 0df883b0bf53f9f419b69ba4a8022e0c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5013785927972229780, guid: 0df883b0bf53f9f419b69ba4a8022e0c, type: 3}
+      propertyPath: m_Size.x
+      value: 1.3868781
+      objectReference: {fileID: 0}
+    - target: {fileID: 5013785927972229780, guid: 0df883b0bf53f9f419b69ba4a8022e0c, type: 3}
+      propertyPath: m_Size.y
+      value: 1.591083
+      objectReference: {fileID: 0}
+    - target: {fileID: 5013785927972229780, guid: 0df883b0bf53f9f419b69ba4a8022e0c, type: 3}
+      propertyPath: m_Offset.x
+      value: 1.1296153
+      objectReference: {fileID: 0}
+    - target: {fileID: 5013785927972229780, guid: 0df883b0bf53f9f419b69ba4a8022e0c, type: 3}
+      propertyPath: m_Offset.y
+      value: 2.5843544
+      objectReference: {fileID: 0}
+    - target: {fileID: 6505196671638060820, guid: 0df883b0bf53f9f419b69ba4a8022e0c, type: 3}
+      propertyPath: m_Name
+      value: DialogueStarterTriggerInitial
+      objectReference: {fileID: 0}
+    - target: {fileID: 8190176484754858206, guid: 0df883b0bf53f9f419b69ba4a8022e0c, type: 3}
+      propertyPath: dialogueTag
+      value: Zelda
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0df883b0bf53f9f419b69ba4a8022e0c, type: 3}
 --- !u!4 &1463402847 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2055102311959635375, guid: 3fcd8726c7cd53345947949baefbab35, type: 3}
@@ -31180,6 +31257,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3480873606878662721, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: m_Volume
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 3575756424381635961, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.009827532
@@ -31276,6 +31357,50 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5490499224717304119, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: _dialogues.Array.size
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 5490499224717304119, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: _dialogues.Array.data[21].Tag
+      value: Pause
+      objectReference: {fileID: 0}
+    - target: {fileID: 5490499224717304119, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: _dialogues.Array.data[21].EventTag
+      value: PauseFinished
+      objectReference: {fileID: 0}
+    - target: {fileID: 5490499224717304119, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: _dialogues.Array.data[1].DialogueLines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5490499224717304119, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: _dialogues.Array.data[21].DialogueLines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5490499224717304119, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: _dialogues.Array.data[1].DialogueLines.Array.data[0]
+      value: Well...
+      objectReference: {fileID: 0}
+    - target: {fileID: 5490499224717304119, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: _dialogues.Array.data[1].DialogueLines.Array.data[1]
+      value: "I think I have seen this sword in another game\u2026"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5490499224717304119, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: _dialogues.Array.data[1].DialogueLines.Array.data[2]
+      value: "I think I have seen this sword in another game\u2026"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5490499224717304119, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: _dialogues.Array.data[1].DialogueLines.Array.data[3]
+      value: "I think I have seen this sword in another game\u2026"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5490499224717304119, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: _dialogues.Array.data[1].DialogueLines.Array.data[4]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5490499224717304119, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: _dialogues.Array.data[21].DialogueLines.Array.data[0]
+      value: I want to quit!
+      objectReference: {fileID: 0}
     - target: {fileID: 5966557744073162490, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: m_RenderMode
       value: 2
@@ -31294,7 +31419,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: _dialogues.Array.size
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: _dialogues.Array.data[0].Tag
@@ -31345,6 +31470,10 @@ PrefabInstance:
       value: HotlineMiamiFinished
       objectReference: {fileID: 0}
     - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: _dialogues.Array.data[12].Tag
+      value: PauseFinished
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: _dialogues.Array.data[0].DialogueLines.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -31366,11 +31495,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: _dialogues.Array.data[9].DialogueLines.Array.size
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: _dialogues.Array.data[10].DialogueLines.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: _dialogues.Array.data[12].DialogueLines.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: _dialogues.Array.data[0].DialogueLines.Array.data[0]
@@ -31425,12 +31558,32 @@ PrefabInstance:
       value: "touch some grass or something\u2026"
       objectReference: {fileID: 0}
     - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: _dialogues.Array.data[9].DialogueLines.Array.data[0]
+      value: Mm, You think so?
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: _dialogues.Array.data[9].DialogueLines.Array.data[1]
+      value: It seem pretty original for me
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: _dialogues.Array.data[10].DialogueLines.Array.data[0]
       value: "It wasn\xB4t that bad, it\xB4s a classic"
       objectReference: {fileID: 0}
     - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: _dialogues.Array.data[11].DialogueLines.Array.data[0]
       value: "Don\xB4t worry, he is sleeping"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: _dialogues.Array.data[12].DialogueLines.Array.data[0]
+      value: "You can\xB4t. You have to finish the work"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: _dialogues.Array.data[12].DialogueLines.Array.data[1]
+      value: No heart feelings, man
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: _dialogues.Array.data[12].DialogueLines.Array.data[2]
+      value: You have to finish the work
       objectReference: {fileID: 0}
     - target: {fileID: 7193537992649511525, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: m_FlipX
@@ -31439,6 +31592,10 @@ PrefabInstance:
     - target: {fileID: 7427051271230186147, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: m_PresetInfoIsWorld
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8020974453675815659, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: m_Volume
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 8743468264262000131, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: m_SortingLayerID
@@ -45851,7 +46008,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6002305736093879794, guid: ac090787d30bd01479ee0e4a482c497f, type: 3}
       propertyPath: m_Color.a
-      value: 0.9411765
+      value: 0.8627451
       objectReference: {fileID: 0}
     - target: {fileID: 8423814174844611416, guid: ac090787d30bd01479ee0e4a482c497f, type: 3}
       propertyPath: target
@@ -46054,4 +46211,5 @@ SceneRoots:
   - {fileID: 2120794923}
   - {fileID: 104796213}
   - {fileID: 152579315}
+  - {fileID: 1460208523}
   - {fileID: 2140789617}
