@@ -226,7 +226,7 @@ Transform:
   m_GameObject: {fileID: 189495009}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.26, y: 0.08, z: 0}
+  m_LocalPosition: {x: 5.19, y: 0.08, z: 0}
   m_LocalScale: {x: 1.1, y: 1.1, z: 1.1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1134,6 +1134,14 @@ PrefabInstance:
       propertyPath: swordSwing
       value: 
       objectReference: {fileID: 8137170320906700535, guid: 452a271267d5b454b96d1114c9ab7000, type: 3}
+    - target: {fileID: 6920892453583051603, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: trail
+      value: 
+      objectReference: {fileID: 6411430052701115483}
+    - target: {fileID: 6949664469506525694, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7013258088791045494, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.58315
@@ -1178,6 +1186,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7510997956430771058, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 6163803667258021223, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
@@ -1185,6 +1197,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+--- !u!96 &6411430052701115483 stripped
+TrailRenderer:
+  m_CorrespondingSourceObject: {fileID: 7510997956430771058, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+  m_PrefabInstance: {fileID: 6411430052701115469}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

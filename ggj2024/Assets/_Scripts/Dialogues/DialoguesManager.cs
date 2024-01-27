@@ -7,32 +7,44 @@ using UnityEngine;
 public class Dialogue
 {
     public string Tag;
+    public string EventTag;
     public bool Written;
     public string[] DialogueLines;
 }
 
 public class DialoguesManager : MonoBehaviour
 {
-    public static DialoguesManager Instance;
-    [SerializeField] private Dialogues _dialogue;
+    public static DialoguesManager NarratorInstance;
+    public static DialoguesManager PlayerInstance;
+    [SerializeField] private bool isPlayer;
+    [SerializeField] private TextWritter _dialogue;
     [SerializeField] private Dialogue[] _dialogues;
     private Dictionary<string,Dialogue> _dialoguesDictionary= new();
 
     private void Awake()
     {
-        if (Instance == null)
+        if (!isPlayer)
         {
-            Instance = this;
+            if (NarratorInstance == null)
+            {
+                NarratorInstance = this;
+            }
         }
         else
         {
-            Destroy(Instance);
+            if (PlayerInstance == null)
+            {
+                PlayerInstance = this;
+            }
         }
+       
 
         foreach (Dialogue dial in _dialogues)
         {
             _dialoguesDictionary.Add(dial.Tag, dial);
         }
+
+        TextWritter.OnDialogueFinish += SetDialogue;
     }
 
 
@@ -41,10 +53,7 @@ public class DialoguesManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.G))
         {
             var dialogue = _dialogues[Random.Range(0, _dialogues.Length)];
-            print(dialogue);
-            var dialogues = dialogue.DialogueLines;
-            print(dialogues);
-            _dialogue.SetDialogue(dialogues);
+            SetDialogue(dialogue.Tag);
         }
     }
 
@@ -52,9 +61,8 @@ public class DialoguesManager : MonoBehaviour
     {
         Dialogue currentDialogue = _dialoguesDictionary[key];
 
-        if (!currentDialogue.Written)
-        {
-            _dialogue.SetDialogue(_dialoguesDictionary[key].DialogueLines);
+        if (!currentDialogue.Written && _dialogue.SetDialogue(_dialoguesDictionary[key], isPlayer))
+        {  
             _dialoguesDictionary[key].Written = true;
         }
     }
