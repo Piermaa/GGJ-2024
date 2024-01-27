@@ -11,11 +11,6 @@ public class PlayerLifeManager : MonoBehaviour
 
     public BaseCharacter PlayerRef;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        PlayerRef = GameObject.FindWithTag("Player").GetComponent<BaseCharacter>();
-    }
 
     private void FixedUpdate()
     {

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 
 public class PlayerMeleeAttack : MonoBehaviour
@@ -7,6 +8,8 @@ public class PlayerMeleeAttack : MonoBehaviour
     [SerializeField] int damage;
     [SerializeField] float attackDistance;
     [SerializeField] GameObject swordSwing;
+    [SerializeField] private AudioClip slashClip; 
+    private AudioSource source;
 
     private EnemyCharacter nearEnemy;
 
@@ -22,6 +25,7 @@ public class PlayerMeleeAttack : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        source = GetComponent<AudioSource>();
         pjRef = GetComponentInParent<PlayerManager>();
         attackCooldown = 0;
         anim = GetComponentInParent<Animator>();
@@ -33,6 +37,7 @@ public class PlayerMeleeAttack : MonoBehaviour
         if(EnemyManager.Instance.EnemyList.Count > 0 && !pjRef.playerCantAttack)
         {
             AimToClosestEnemy(CloserEnemy());
+            source.PlayOneShot(slashClip);
         }
     }
 
