@@ -11,7 +11,9 @@ public class MushroomPickupable : OnPlayerTriggerEnter
         pj.StartCountDown = true;
         pj.MushroomPickUp = true;
 
-        pj.ActivePickUp();  
+        pj.ActivePickUp();
+
+        Destroy(gameObject);
 
     }
 }
