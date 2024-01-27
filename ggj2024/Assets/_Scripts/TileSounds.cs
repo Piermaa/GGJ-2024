@@ -12,6 +12,7 @@ public class TileSounds : MonoBehaviour
 {
     [SerializeField] private TileCategory[] tileCategories;
     [SerializeField] private string defaultCategory = "GrassDefault";
+    [SerializeField] private float checkTime = .1f;
     private PlayerMovement playerMovement;
     private Tilemap tilemap;
     private Vector3Int location;
@@ -26,7 +27,7 @@ public class TileSounds : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("SetTileSound", .1f, .2f);
+        InvokeRepeating("SetTileSound", checkTime, .2f);
     }
 
     private void SetTileSound()
