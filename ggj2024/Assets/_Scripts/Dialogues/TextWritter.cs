@@ -24,7 +24,7 @@ public class TextWritter : MonoBehaviour
 
     private int _dialogueIndex;
     private int _linesIndex;
-
+    private bool mustSpeak;
 
     void Start()
     {
@@ -47,12 +47,12 @@ public class TextWritter : MonoBehaviour
             }
         }
 
-        if (isWritting && !speakSource.isPlaying)
+        if (mustSpeak && !speakSource.isPlaying)
         {
             speakSource.pitch = UnityEngine.Random.Range(.95f,1.1f);
             speakSource.Play();
         }
-        else if(!isWritting)
+        else if(!mustSpeak)
         {
             speakSource.Stop();
         }
@@ -66,12 +66,13 @@ public class TextWritter : MonoBehaviour
 
     IEnumerator TypeLine()
     {
+        mustSpeak = true;
         foreach (char c in currentLines[_linesIndex].ToCharArray())
         {
             textComponent.text += c;
             yield return new WaitForSeconds(_textSpeed);
         }
-
+        mustSpeak = false;
         yield return new WaitForSeconds(_timeBetweenLines);
 
         NextLine();
