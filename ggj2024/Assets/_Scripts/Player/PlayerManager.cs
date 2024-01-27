@@ -115,4 +115,8 @@ public class PlayerManager : BaseCharacter
         }
 
     }
+    public override void Death()
+    {
+        SceneManagement.Instance.LoadScene(2);
+    }
 }

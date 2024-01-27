@@ -35,9 +35,9 @@ public class CountdownTimer : MonoBehaviour
         seconds = Mathf.FloorToInt(currentTime % 60);
         timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
 
-        if(currentTime < 0.1)
+        if(currentTime < 1.2f)
         {
-            SceneManagement.Instance.LoadScene(0);
+            SceneManagement.Instance.LoadScene(3);
         }
     }
 
