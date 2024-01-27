@@ -7,10 +7,13 @@ public class AjoHit : MonoBehaviour
     [SerializeField] private int ajoDamage;
     [SerializeField] private float radius;
     [SerializeField] private LayerMask whatIsEnemy;
+    [SerializeField] private GameObject child;
     private Camera _camera;
-  
+    private bool unlocked=false;
+
     private void Awake()
     {
+        CountdownTimer.OnTimeElapsed += UnlockAjo;
         _camera = Camera.main;
 
         InvokeRepeating("InflictDamage",0,1);
@@ -24,11 +27,23 @@ public class AjoHit : MonoBehaviour
 
     private void InflictDamage()
     {
-        Collider2D[] enemies = Physics2D.OverlapCircleAll(transform.position, radius, whatIsEnemy);
-
-        foreach (Collider2D enemy in enemies) 
+        if (unlocked)
         {
-            enemy.GetComponent<IDamageable>().TakeDamage(ajoDamage);
+            Collider2D[] enemies = Physics2D.OverlapCircleAll(transform.position, radius, whatIsEnemy);
+
+            foreach (Collider2D enemy in enemies)
+            {
+                enemy.GetComponent<IDamageable>().TakeDamage(ajoDamage);
+            }
+        }
+    }
+
+    private void UnlockAjo(int timeelapsed)
+    {
+        if (timeelapsed==90)
+        {
+            unlocked = true;
+            child.SetActive(true);
         }
     }
 }

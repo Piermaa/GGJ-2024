@@ -457,7 +457,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseButton: 1
   rebotinPrefab: {fileID: 6906326865816838993, guid: 63fe039b5d95c6e478b4ef70aa82a1b1, type: 3}
-  attackCooldown: 3
+  attackCooldown: 6
 --- !u!114 &3676543330160329699
 MonoBehaviour:
   m_ObjectHideFlags: 0

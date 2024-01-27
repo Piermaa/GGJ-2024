@@ -13,15 +13,20 @@ public class AbilityCooldown : MonoBehaviour
 
     [SerializeField] private PlayerShoot playerShoot;
 
-    private float maxCD;
+    [SerializeField] private float maxCD;
     private void Awake()
     {
+        icon.enabled = false;
+        abilityCooldown.enabled = false;
+        playerShoot.enabled = false;
+
+
         maxCD = playerShoot.AttackCD;
         CountdownTimer.OnTimeElapsed += UnlockAbility;
     }
     private void Update()
     {
-        abilityCooldown.fillAmount = (float) playerShoot.AttackCDTimer / maxCD;
+        abilityCooldown.fillAmount = 1f - (float)(playerShoot.AttackCDTimer / maxCD);
     }
 
     private void UnlockAbility(int timeElapsed)
