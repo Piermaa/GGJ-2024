@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerShoot : MonoBehaviour
 {
+    public float AttackCDTimer => attackCooldown;
+    public float AttackCD => attackCooldown;
+
     [SerializeField] private int mouseButton;
     [SerializeField] private GameObject rebotinPrefab;
     [SerializeField] private float attackCooldown=.1f;
@@ -62,7 +65,6 @@ public class PlayerShoot : MonoBehaviour
 
     private void ReloadRebotin()
     {
-        attackCooldownTimer = attackCooldown;
         _canShootRebotin = true;
     }
 }
