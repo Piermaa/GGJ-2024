@@ -8,6 +8,7 @@ public class CountdownTimer : MonoBehaviour
 {
     public static event Action<int> OnTimeElapsed;
 
+    [SerializeField] private int timeBetweenEvents;
     [SerializeField] float startingTime;
     [SerializeField] TextMeshProUGUI timerText;
 

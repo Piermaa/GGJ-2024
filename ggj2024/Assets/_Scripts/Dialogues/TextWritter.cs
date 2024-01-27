@@ -47,12 +47,12 @@ public class TextWritter : MonoBehaviour
             }
         }
 
-        if (isWritting && speakSource.isPlaying)
+        if (isWritting && !speakSource.isPlaying)
         {
             speakSource.pitch = UnityEngine.Random.Range(.95f,1.1f);
             speakSource.Play();
         }
-        else
+        else if(!isWritting)
         {
             speakSource.Stop();
         }
