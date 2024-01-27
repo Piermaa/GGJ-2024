@@ -19,9 +19,9 @@ public class EnemySpawner : MonoBehaviour
     [Tooltip("Cada cuantos segs spawnea 1 enemigo")]
     private void Start()
     {
+        spawnTimer = spawnRate + warmUpTime;
         mainCamera = Camera.main;
         CountdownTimer.OnTimeElapsed += TimeElapsed;
-        InvokeRepeating("SpawnEnemy", warmUpTime, spawnRate);
     }
 
     private void Update()

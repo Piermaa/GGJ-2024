@@ -23,6 +23,5 @@ public class PacmanPickupable : OnPlayerTriggerEnter
         pj.ActivePickUp();
 
         Destroy(gameObject);
-
     }
 }
