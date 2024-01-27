@@ -9,6 +9,7 @@ public class AjoHit : MonoBehaviour
     [SerializeField] private LayerMask whatIsEnemy;
     [SerializeField] private GameObject child;
     [SerializeField] private AudioSource source;
+    [SerializeField][TextArea] private string OnUnlockText;
     private Camera _camera;
     private bool unlocked=false;
 
@@ -48,6 +49,7 @@ public class AjoHit : MonoBehaviour
         {
             unlocked = true;
             child.SetActive(true);
+            FindObjectOfType<UnlockNotification>().UnlockAbilityNotif(OnUnlockText);
         }
     }
 }
