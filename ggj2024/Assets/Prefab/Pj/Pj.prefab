@@ -594,7 +594,7 @@ MonoBehaviour:
   resetMaterialTime: 0.1
   StartCountDown: 0
   MushroomPickUp: 0
-  SamusPickUp: 0
+  SamusPickUp: 1
   StarPickUp: 0
   PackmanPickUp: 0
   durationEffectTimer: 2
