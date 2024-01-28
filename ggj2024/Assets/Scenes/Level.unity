@@ -13513,6 +13513,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7947911505737750448, guid: d5762f992ea3bd544bb8287f66e8f844, type: 3}
   m_PrefabInstance: {fileID: 1697025949}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &416425484 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7709924307211832747, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+  m_PrefabInstance: {fileID: 1947369218}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &419996081
 GameObject:
   m_ObjectHideFlags: 0
@@ -15026,6 +15031,155 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7947911505737750448, guid: cfa0a5ef94fb05d4f97d095a05dc55c5, type: 3}
   m_PrefabInstance: {fileID: 467595232}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &472920113
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 472920114}
+  - component: {fileID: 472920115}
+  m_Layer: 0
+  m_Name: DialogNarrator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &472920114
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 472920113}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 416425484}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &472920115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 472920113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc2bd33b2f0e25d4a8e24955c5a247cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPlayer: 0
+  _dialogue: {fileID: 1251902457}
+  _dialogues:
+  - Tag: DialogueIntro
+    EventTag: 
+    Written: 0
+    DialogueLines:
+    - "Now go\u2026"
+    - just go and do your main character stuff or whatever..
+  - Tag: Dialogue1Finish
+    EventTag: 
+    Written: 0
+    DialogueLines:
+    - For the love of God, can you shut up and do main character things?
+  - Tag: Dialogue2Finish
+    EventTag: 
+    Written: 0
+    DialogueLines:
+    - SORRY for not fulfilling your expectations little shit
+    - "but you have to continue\u2026"
+  - Tag: Dialogue3Finish
+    EventTag: 
+    Written: 0
+    DialogueLines:
+    - "OH PLEASE JUST CONTINUE AND DON\u2019T BE A CRYBABY"
+  - Tag: Dialogue4Finish
+    EventTag: 
+    Written: 0
+    DialogueLines:
+    - We didn't have that much budget.
+  - Tag: Dialogue5Finish
+    EventTag: 
+    Written: 0
+    DialogueLines:
+    - Shut up, you're going to wake the dead
+  - Tag: Pacman2Finish
+    EventTag: 
+    Written: 0
+    DialogueLines:
+    - Ignore that, just continue surviving.
+  - Tag: NoTime
+    EventTag: 
+    Written: 0
+    DialogueLines:
+    - "Tik tok tik tok, the time is running out\u2026"
+  - Tag: Dialogue7Finish
+    EventTag: 
+    Written: 0
+    DialogueLines:
+    - 
+    - For the love of God, can you shut up and do main character things?
+  - Tag: Finish
+    EventTag: 
+    Written: 0
+    DialogueLines:
+    - Now go and be free
+    - "touch some grass or something\u2026"
+  - Tag: ZeldaFinish
+    EventTag: 
+    Written: 0
+    DialogueLines:
+    - Mm, You think so?
+    - It seem pretty original to me
+  - Tag: MetroidHelmetOffFinished
+    EventTag: 
+    Written: 0
+    DialogueLines:
+    - "It wasn\xB4t that bad, it\xB4s a classic"
+  - Tag: HotlineMiamiFinished
+    EventTag: 
+    Written: 0
+    DialogueLines:
+    - "Don\xB4t worry, he is sleeping"
+  - Tag: PauseFinished
+    EventTag: 
+    Written: 0
+    DialogueLines:
+    - "You can\xB4t. You have to finish the work"
+    - No heart feelings, man
+  - Tag: EasterEgg5
+    EventTag: 
+    Written: 0
+    DialogueLines:
+    - UFUNCION(BlueprintCallable)
+    - FString FinalLine= "El DNU es inconstitucional";
+    - ULOG(FinalLine);
+    - Application.Quit();
+  - Tag: WomanFinish
+    EventTag: 
+    Written: 0
+    DialogueLines:
+    - What do you think is this game? Dark Souls?
+    - She is not a lore important character
+    - Just another robbed asset
+  - Tag: CorridorFinish
+    EventTag: 
+    Written: 0
+    DialogueLines:
+    - "Don\xB4t you dare touching me"
+    - "Wait... you can\xB4t do it"
+  - Tag: WoodsFinish
+    EventTag: 
+    Written: 0
+    DialogueLines:
+    - Not many gamers know about that feeling
 --- !u!1001 &474363178
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31355,6 +31509,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2055102311959635375, guid: f681a54372d73d74785b9c9d4ac477e8, type: 3}
   m_PrefabInstance: {fileID: 1250896125}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1251902457 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2462933993306164914, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+  m_PrefabInstance: {fileID: 1947369218}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea14f1395e6e2e14aa83b214d231bc8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1252859056 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2055102311959635369, guid: 6242b925f1d3e0d44a183102cd3d4c26, type: 3}
@@ -48082,6 +48247,10 @@ PrefabInstance:
       value: Even intimate. If you know what I mean
       objectReference: {fileID: 0}
     - target: {fileID: 5966557744073162490, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 871565520}
+    - target: {fileID: 5966557744073162490, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: m_RenderMode
       value: 2
       objectReference: {fileID: 0}
@@ -48463,7 +48632,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 7709924307211832747, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      insertIndex: 1
+      addedObject: {fileID: 472920114}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6732234323180982734, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       insertIndex: -1
