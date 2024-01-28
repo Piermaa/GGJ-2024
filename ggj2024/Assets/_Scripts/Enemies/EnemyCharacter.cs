@@ -19,8 +19,16 @@ public class EnemyCharacter : BaseCharacter
 
     public override void Death()
     {
+        base .Death();
+        GetComponent<Animator>().SetTrigger("Death");
+        
+        isDead = true;
         EnemyManager.Instance.EnemyDeath(this, transform.position);
-        base.Death();
+    }
+
+    public void DeathFinish()
+    {
+        Destroy(gameObject);
     }
 
 }

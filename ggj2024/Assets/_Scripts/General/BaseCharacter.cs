@@ -25,7 +25,7 @@ public class BaseCharacter : MonoBehaviour, IDamageable
     [SerializeField] private float resetMaterialTime;
 
     private AudioSource takingDamageAudioSource;
-
+    protected bool isDead=false;
     protected float _currentHealth=100;
 
     private Material _baseMaterial;
@@ -52,6 +52,11 @@ public class BaseCharacter : MonoBehaviour, IDamageable
 
     public virtual void TakeDamage(float damage)
     {
+        if (isDead)
+        {
+            return;
+        }
+
         _currentHealth -= damage;
         _characterSprite.material= _flashingWhiteMaterial;
         _resetMaterialTimer = resetMaterialTime;
@@ -69,6 +74,6 @@ public class BaseCharacter : MonoBehaviour, IDamageable
 
     public virtual void Death()
     {
-        Destroy(gameObject);
+        takingDamageAudioSource.PlayOneShot(_dieAudioClip);
     }
 }

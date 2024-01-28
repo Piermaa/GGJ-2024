@@ -38,6 +38,7 @@ public class EnemyManager : MonoBehaviour
     {
         foreach (var enemy in enemiesOnScreen)
         {
+
             Destroy(enemy.gameObject);
         }
         enemiesOnScreen.Clear();
