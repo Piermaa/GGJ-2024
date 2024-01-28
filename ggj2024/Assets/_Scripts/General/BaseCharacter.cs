@@ -64,6 +64,7 @@ public class BaseCharacter : MonoBehaviour, IDamageable
 
         OnTakeDamage?.Invoke(damage);
 
+        takingDamageAudioSource.pitch=UnityEngine.Random.Range(0.8f, 1.2f);
         takingDamageAudioSource.PlayOneShot(takingDamageAudioClip);
 
         if (_currentHealth <= 0) 

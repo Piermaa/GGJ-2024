@@ -44,7 +44,10 @@ public class DialoguesManager : MonoBehaviour
             if (!_dialoguesDictionary.ContainsKey(dial.Tag))
             {
                 _dialoguesDictionary.Add(dial.Tag, dial);
+                dial.Written = false;
             }
+
+            dial.Written = false;
         }
 
         TextWritter.OnDialogueFinish += SetDialogue;

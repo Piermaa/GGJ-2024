@@ -12,7 +12,9 @@ public class BasicShoot : MonoBehaviour, IProjectile
 
     private void Awake()
     {
-        GetComponent<AudioSource>().PlayOneShot(shootSound);
+        AudioSource source =GetComponent<AudioSource>();
+        source.pitch = UnityEngine.Random.Range(0.9f, 1.2f);
+        source.PlayOneShot(shootSound);
     }
 
     private void FixedUpdate()
