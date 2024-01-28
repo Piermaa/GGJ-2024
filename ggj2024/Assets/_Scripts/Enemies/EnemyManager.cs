@@ -8,6 +8,7 @@ public class EnemyManager : MonoBehaviour
 
     [SerializeField] [Range(0,100)] private int nukeDropRatio;
     [SerializeField] private GameObject nukeDrop;
+    [SerializeField] private DestroyActivator steamAchievement;
     public static EnemyManager Instance;
     
     private List<EnemyCharacter> enemiesOnScreen = new();
@@ -59,6 +60,11 @@ public class EnemyManager : MonoBehaviour
 
     public void EnemyDeath(EnemyCharacter enemy,Vector2 deathPos)
     {
+        if (steamAchievement!=null)
+        {
+            steamAchievement.BeginAchievements();
+        }
+        
         TryDropNuke(deathPos);
         RemoveEnemy(enemy);
     }
