@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.SceneManagement;
 using UnityEngine;
 
 public class PlayerMeleeAttack : MonoBehaviour
@@ -74,8 +73,12 @@ public class PlayerMeleeAttack : MonoBehaviour
 
         if (attackCooldown <= 0 && alreadyAttacking)
         {
+            if(vectorToTarget.x < 0)
+                anim.SetTrigger("AttackBehind");
+            else
+                anim.SetTrigger("Attack");
+
             attackCooldown = 1f;
-            anim.SetTrigger("Attack");
             source.PlayOneShot(slashClip);
             Instantiate(swordSwing, nearEnemy.transform.position + new Vector3(0, 0, -2), Quaternion.Euler(Vector3.forward * angle + new Vector3(0, 0, 77)));
         }
