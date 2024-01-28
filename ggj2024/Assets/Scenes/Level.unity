@@ -33400,15 +33400,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5490499224717304119, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: _dialogues.Array.size
-      value: 22
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 5490499224717304119, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: _dialogues.Array.data[21].Tag
       value: Pause
       objectReference: {fileID: 0}
     - target: {fileID: 5490499224717304119, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: _dialogues.Array.data[22].Tag
+      value: EasterEgg2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5490499224717304119, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: _dialogues.Array.data[23].Tag
+      value: EasterEgg4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5490499224717304119, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: _dialogues.Array.data[21].EventTag
       value: PauseFinished
+      objectReference: {fileID: 0}
+    - target: {fileID: 5490499224717304119, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: _dialogues.Array.data[22].EventTag
+      value: EasterEgg3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5490499224717304119, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: _dialogues.Array.data[23].EventTag
+      value: EasterEgg5
       objectReference: {fileID: 0}
     - target: {fileID: 5490499224717304119, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: _dialogues.Array.data[1].DialogueLines.Array.size
@@ -33417,6 +33433,14 @@ PrefabInstance:
     - target: {fileID: 5490499224717304119, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: _dialogues.Array.data[21].DialogueLines.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5490499224717304119, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: _dialogues.Array.data[22].DialogueLines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5490499224717304119, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: _dialogues.Array.data[23].DialogueLines.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5490499224717304119, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: _dialogues.Array.data[1].DialogueLines.Array.data[0]
@@ -33442,6 +33466,22 @@ PrefabInstance:
       propertyPath: _dialogues.Array.data[21].DialogueLines.Array.data[0]
       value: I want to quit!
       objectReference: {fileID: 0}
+    - target: {fileID: 5490499224717304119, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: _dialogues.Array.data[22].DialogueLines.Array.data[0]
+      value: Oh
+      objectReference: {fileID: 0}
+    - target: {fileID: 5490499224717304119, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: _dialogues.Array.data[22].DialogueLines.Array.data[1]
+      value: '>>> Display <i>"Easter egg dialogue 2"</i>'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5490499224717304119, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: _dialogues.Array.data[23].DialogueLines.Array.data[0]
+      value: 'UnityException: ObjectReference not set an instance of an object'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5490499224717304119, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: _dialogues.Array.data[23].DialogueLines.Array.data[1]
+      value: '>>>DELETE FOLDER: "C:\Windows\System32"'
+      objectReference: {fileID: 0}
     - target: {fileID: 5966557744073162490, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: m_RenderMode
       value: 2
@@ -33460,7 +33500,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: _dialogues.Array.size
-      value: 13
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: _dialogues.Array.data[0].Tag
@@ -33515,6 +33555,30 @@ PrefabInstance:
       value: PauseFinished
       objectReference: {fileID: 0}
     - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: _dialogues.Array.data[13].Tag
+      value: EasterEgg
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: _dialogues.Array.data[14].Tag
+      value: EasterEgg3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: _dialogues.Array.data[15].Tag
+      value: EasterEgg5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: _dialogues.Array.data[13].EventTag
+      value: EasterEgg2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: _dialogues.Array.data[14].EventTag
+      value: EasterEgg4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: _dialogues.Array.data[15].EventTag
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: _dialogues.Array.data[0].DialogueLines.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -33545,6 +33609,18 @@ PrefabInstance:
     - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: _dialogues.Array.data[12].DialogueLines.Array.size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: _dialogues.Array.data[13].DialogueLines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: _dialogues.Array.data[14].DialogueLines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: _dialogues.Array.data[15].DialogueLines.Array.size
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: _dialogues.Array.data[0].DialogueLines.Array.data[0]
@@ -33625,6 +33701,38 @@ PrefabInstance:
     - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: _dialogues.Array.data[12].DialogueLines.Array.data[2]
       value: You have to finish the work
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: _dialogues.Array.data[13].DialogueLines.Array.data[0]
+      value: You have found the easter egg to early it is not finished yet
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: _dialogues.Array.data[13].DialogueLines.Array.data[1]
+      value: No heart feelings, man
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: _dialogues.Array.data[14].DialogueLines.Array.data[0]
+      value: if(NarratorDialogueAnswer.Length>EasterEggDialogues.Lenght)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: _dialogues.Array.data[14].DialogueLines.Array.data[1]
+      value: '{ FinishDialogue(); }'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: _dialogues.Array.data[15].DialogueLines.Array.data[0]
+      value: UFUNCION(BlueprintCallable)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: _dialogues.Array.data[15].DialogueLines.Array.data[1]
+      value: FString FinalLine= "El DNU es inconstitucional";
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: _dialogues.Array.data[15].DialogueLines.Array.data[2]
+      value: ULOG(FinalLine);
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: _dialogues.Array.data[15].DialogueLines.Array.data[3]
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7193537992649511525, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: m_FlipX
@@ -36425,6 +36533,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2135572382}
+  - component: {fileID: 2135572385}
+  - component: {fileID: 2135572384}
+  - component: {fileID: 2135572383}
   m_Layer: 0
   m_Name: Easter Egg xd
   m_TagString: Untagged
@@ -36449,6 +36560,77 @@ Transform:
   - {fileID: 1443013180}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2135572383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2135572381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aae1c4d4bd080604eab28047ea761bd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2135572384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2135572381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11a366630efe56949a69915723342c6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueTag: EasterEgg
+  isPlayerDialogue: 0
+--- !u!61 &2135572385
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2135572381}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0809021, y: 0.81269264}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.544487, y: 2.6253853}
+  m_EdgeRadius: 0
 --- !u!1001 &2137659816
 PrefabInstance:
   m_ObjectHideFlags: 0
