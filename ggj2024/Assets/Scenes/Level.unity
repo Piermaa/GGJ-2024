@@ -36750,7 +36750,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: _dialogues.Array.size
-      value: 16
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: _dialogues.Array.data[0].Tag
@@ -36774,59 +36774,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: _dialogues.Array.data[5].Tag
-      value: PacmanFinish
+      value: Dialogue5Finish
       objectReference: {fileID: 0}
     - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: _dialogues.Array.data[6].Tag
-      value: NoTime
+      value: PacmanFinish
       objectReference: {fileID: 0}
     - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: _dialogues.Array.data[7].Tag
-      value: Dialogue7Finish
+      value: NoTime
       objectReference: {fileID: 0}
     - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: _dialogues.Array.data[8].Tag
-      value: Finish
+      value: Dialogue7Finish
       objectReference: {fileID: 0}
     - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: _dialogues.Array.data[9].Tag
-      value: ZeldaFinish
+      value: Finish
       objectReference: {fileID: 0}
     - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: _dialogues.Array.data[10].Tag
-      value: MetroidHelmetOffFinished
+      value: ZeldaFinish
       objectReference: {fileID: 0}
     - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: _dialogues.Array.data[11].Tag
-      value: HotlineMiamiFinished
+      value: MetroidHelmetOffFinished
       objectReference: {fileID: 0}
     - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: _dialogues.Array.data[12].Tag
-      value: PauseFinished
+      value: HotlineMiamiFinished
       objectReference: {fileID: 0}
     - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: _dialogues.Array.data[13].Tag
-      value: EasterEgg
+      value: PauseFinished
       objectReference: {fileID: 0}
     - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: _dialogues.Array.data[14].Tag
-      value: EasterEgg3
+      value: EasterEgg
       objectReference: {fileID: 0}
     - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: _dialogues.Array.data[15].Tag
+      value: EasterEgg3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: _dialogues.Array.data[16].Tag
       value: EasterEgg5
       objectReference: {fileID: 0}
     - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: _dialogues.Array.data[13].EventTag
-      value: EasterEgg2
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: _dialogues.Array.data[14].EventTag
-      value: EasterEgg4
+      value: EasterEgg2
       objectReference: {fileID: 0}
     - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: _dialogues.Array.data[15].EventTag
-      value: 
+      value: EasterEgg4
       objectReference: {fileID: 0}
     - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: _dialogues.Array.data[0].DialogueLines.Array.size
@@ -36845,8 +36849,12 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: _dialogues.Array.data[5].DialogueLines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: _dialogues.Array.data[7].DialogueLines.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: _dialogues.Array.data[9].DialogueLines.Array.size
@@ -36854,22 +36862,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: _dialogues.Array.data[10].DialogueLines.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: _dialogues.Array.data[12].DialogueLines.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
-      propertyPath: _dialogues.Array.data[13].DialogueLines.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
-      propertyPath: _dialogues.Array.data[14].DialogueLines.Array.size
+      propertyPath: _dialogues.Array.data[13].DialogueLines.Array.size
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: _dialogues.Array.data[14].DialogueLines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: _dialogues.Array.data[15].DialogueLines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: _dialogues.Array.data[16].DialogueLines.Array.size
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
@@ -36902,15 +36914,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: _dialogues.Array.data[5].DialogueLines.Array.data[0]
-      value: Ignore that, just continue surviving.
+      value: Shut up, you're going to wake the dead
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: _dialogues.Array.data[5].DialogueLines.Array.data[1]
+      value: FString FinalLine= "El DNU es inconstitucional";
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: _dialogues.Array.data[5].DialogueLines.Array.data[2]
+      value: ULOG(FinalLine);
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: _dialogues.Array.data[5].DialogueLines.Array.data[3]
+      value: Application.Quit();
       objectReference: {fileID: 0}
     - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: _dialogues.Array.data[6].DialogueLines.Array.data[0]
-      value: "Tik tok tik tok, the time is running out\u2026"
+      value: Ignore that, just continue surviving.
       objectReference: {fileID: 0}
     - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: _dialogues.Array.data[7].DialogueLines.Array.data[0]
-      value: 
+      value: "Tik tok tik tok, the time is running out\u2026"
       objectReference: {fileID: 0}
     - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: _dialogues.Array.data[7].DialogueLines.Array.data[1]
@@ -36918,31 +36942,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: _dialogues.Array.data[8].DialogueLines.Array.data[0]
-      value: Now go and be free
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: _dialogues.Array.data[8].DialogueLines.Array.data[1]
-      value: "touch some grass or something\u2026"
+      value: For the love of God, can you shut up and do main character things?
       objectReference: {fileID: 0}
     - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: _dialogues.Array.data[9].DialogueLines.Array.data[0]
-      value: Mm, You think so?
+      value: Now go and be free
       objectReference: {fileID: 0}
     - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: _dialogues.Array.data[9].DialogueLines.Array.data[1]
-      value: It seem pretty original to me
+      value: "touch some grass or something\u2026"
       objectReference: {fileID: 0}
     - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: _dialogues.Array.data[10].DialogueLines.Array.data[0]
-      value: "It wasn\xB4t that bad, it\xB4s a classic"
+      value: Mm, You think so?
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: _dialogues.Array.data[10].DialogueLines.Array.data[1]
+      value: It seem pretty original to me
       objectReference: {fileID: 0}
     - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: _dialogues.Array.data[11].DialogueLines.Array.data[0]
-      value: "Don\xB4t worry, he is sleeping"
+      value: "It wasn\xB4t that bad, it\xB4s a classic"
       objectReference: {fileID: 0}
     - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: _dialogues.Array.data[12].DialogueLines.Array.data[0]
-      value: "You can\xB4t. You have to finish the work"
+      value: "Don\xB4t worry, he is sleeping"
       objectReference: {fileID: 0}
     - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: _dialogues.Array.data[12].DialogueLines.Array.data[1]
@@ -36954,7 +36982,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: _dialogues.Array.data[13].DialogueLines.Array.data[0]
-      value: You have found the easter egg to early it is not finished yet
+      value: "You can\xB4t. You have to finish the work"
       objectReference: {fileID: 0}
     - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: _dialogues.Array.data[13].DialogueLines.Array.data[1]
@@ -36962,7 +36990,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: _dialogues.Array.data[14].DialogueLines.Array.data[0]
-      value: if(NarratorDialogueAnswer.Length>EasterEggDialogues.Lenght)
+      value: You have found the easter egg to early it is not finished yet
       objectReference: {fileID: 0}
     - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: _dialogues.Array.data[14].DialogueLines.Array.data[1]
@@ -36970,11 +36998,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: _dialogues.Array.data[15].DialogueLines.Array.data[0]
-      value: UFUNCION(BlueprintCallable)
+      value: if(NarratorDialogueAnswer.Length>EasterEggDialogues.Lenght)
       objectReference: {fileID: 0}
     - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: _dialogues.Array.data[15].DialogueLines.Array.data[1]
-      value: FString FinalLine= "El DNU es inconstitucional";
+      value: '{ FinishDialogue(); }'
       objectReference: {fileID: 0}
     - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: _dialogues.Array.data[15].DialogueLines.Array.data[2]
@@ -36982,6 +37010,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: _dialogues.Array.data[15].DialogueLines.Array.data[3]
+      value: Application.Quit();
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: _dialogues.Array.data[16].DialogueLines.Array.data[0]
+      value: UFUNCION(BlueprintCallable)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: _dialogues.Array.data[16].DialogueLines.Array.data[1]
+      value: FString FinalLine= "El DNU es inconstitucional";
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: _dialogues.Array.data[16].DialogueLines.Array.data[2]
+      value: ULOG(FinalLine);
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963947494216514810, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: _dialogues.Array.data[16].DialogueLines.Array.data[3]
       value: Application.Quit();
       objectReference: {fileID: 0}
     - target: {fileID: 7193537992649511525, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}

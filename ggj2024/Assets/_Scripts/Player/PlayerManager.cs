@@ -110,6 +110,7 @@ public class PlayerManager : BaseCharacter
 
         if(PacmanPickUp)
         {
+            PacmanPickUp = false;
             playerCantAttack = false;
             spawnerRef.FinishPacManMode();
             anim.SetBool("PacmanTime", false);
