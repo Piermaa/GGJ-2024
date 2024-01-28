@@ -9,16 +9,12 @@ public class PlayerMeleeAttack : MonoBehaviour
     [SerializeField] float attackDistance;
     [SerializeField] GameObject swordSwing;
     [SerializeField] private AudioClip slashClip; 
+    
     private AudioSource source;
-
     private EnemyCharacter nearEnemy;
-
     private bool alreadyAttacking = false;
-
     private float attackCooldown;
-
     private Animator anim;
-
     private PlayerManager pjRef;
 
 
@@ -37,7 +33,6 @@ public class PlayerMeleeAttack : MonoBehaviour
         if(EnemyManager.Instance.EnemyList.Count > 0 && !pjRef.playerCantAttack)
         {
             AimToClosestEnemy(CloserEnemy());
-            source.PlayOneShot(slashClip);
         }
     }
 
@@ -79,6 +74,7 @@ public class PlayerMeleeAttack : MonoBehaviour
         {
             attackCooldown = 1f;
             anim.SetTrigger("Attack");
+            source.PlayOneShot(slashClip);
             Instantiate(swordSwing, nearEnemy.transform.position + new Vector3(0, 0, -2), Quaternion.Euler(Vector3.forward * angle + new Vector3(0, 0, 77)));
         }
         else

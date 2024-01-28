@@ -6,12 +6,13 @@ public class EnemyDamage : EnemyBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.transform.CompareTag("Player"))
+
+        if (collision.CompareTag("Player") && collision.name != "SwordSlash(Clone)")
         {
-            if (collision.gameObject.TryGetComponent<IDamageable>(out var damageable))
-            {
-                damageable.TakeDamage(enemyStats.Damage);
-            }
-        }  
+            print("PlayerInside");
+
+            collision.GetComponent<IDamageable>().TakeDamage(enemyStats.Damage);
+        }
+
     }
 }

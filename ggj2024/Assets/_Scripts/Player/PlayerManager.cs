@@ -17,7 +17,7 @@ public class PlayerManager : BaseCharacter
     [SerializeField] private float durationSamusEffect;
     [SerializeField] private float durationPacmanEffect;
     [SerializeField] private float durationMushroomEffect;
-    
+    [SerializeField] private float regenSpeed = 2;
     private EnemySpawner spawnerRef;
 
     private float countDown;
@@ -42,6 +42,7 @@ public class PlayerManager : BaseCharacter
     {
         base.Update();
 
+        _currentHealth = _currentHealth<100 ? _currentHealth + Time.deltaTime*regenSpeed : 100;
         if (StartCountDown)
         {
             countDown -= Time.deltaTime;

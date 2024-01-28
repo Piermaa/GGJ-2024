@@ -336,6 +336,7 @@ MonoBehaviour:
   damage: 1
   attackDistance: 5
   swordSwing: {fileID: 8137170320906700535, guid: 452a271267d5b454b96d1114c9ab7000, type: 3}
+  slashClip: {fileID: 0}
 --- !u!212 &8297946643642508550
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -401,7 +402,6 @@ GameObject:
   - component: {fileID: 7522434255971589701}
   - component: {fileID: 7988522401684516040}
   - component: {fileID: 6949664469506525694}
-  - component: {fileID: 689672237237402618}
   - component: {fileID: 1568100710680796049}
   - component: {fileID: 4626860575285513350}
   - component: {fileID: 3676543330160329699}
@@ -587,19 +587,6 @@ MonoBehaviour:
   timeBetweenStepSounds: 0.2
   rb: {fileID: 7522434255971589701}
   anim: {fileID: 4336883333873556730}
---- !u!114 &689672237237402618
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6732234323180982734}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b5df1d63a6f9f8469848b4680994ca5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerRef: {fileID: 0}
 --- !u!114 &1568100710680796049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1192,6 +1179,10 @@ PrefabInstance:
     - target: {fileID: 1378538810563187260, guid: d34346a19476b9340acc1935860481a8, type: 3}
       propertyPath: m_Name
       value: DamageNotif
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133571570996563549, guid: d34346a19476b9340acc1935860481a8, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7970412195173050846, guid: d34346a19476b9340acc1935860481a8, type: 3}
       propertyPath: m_Pivot.x
