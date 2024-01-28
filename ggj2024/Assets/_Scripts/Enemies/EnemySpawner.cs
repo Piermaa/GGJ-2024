@@ -11,7 +11,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private float warmUpTime, spawnRate;
     [SerializeField] private float enemyHalfHeight=50;
 
-    public bool pacmanMode = false;
+    private bool pacmanMode = false;
     private float spawnTimer;
     private Camera mainCamera;
     private int difficulty=1;
@@ -115,12 +115,23 @@ public class EnemySpawner : MonoBehaviour
         enemiesPerSpawn++;
     }
 
-    public void SpawnBurst(EnemyCharacter newEnemy, int amount)
+    public void SpawnBurst(GameObject newEnemy, int amount)
     {
         for (int i = 0; i < amount; i++)
         {
             var enemy = Instantiate(newEnemy, GetEnemySpawnPos(), Quaternion.identity);
             enemy.GetComponent<EnemyMovement>().SetPlayer(playerTransform);
         }
+    }
+
+    public void SetPacmanMode()
+    {
+        pacmanMode = true;
+        SpawnBurst(enemies[3], 30);
+    }
+
+    public void FinishPacManMode()
+    {
+        pacmanMode = false;
     }
 }

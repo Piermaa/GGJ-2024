@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.AI;
 public class EnemyMovement : EnemyBehaviour
 {
     [SerializeField] private Transform _playerTransform;
+
+    private NavMeshAgent agent;
 
     private Rigidbody2D rb2d;
     private bool _isOnKnockbackState=false;
@@ -12,21 +14,24 @@ public class EnemyMovement : EnemyBehaviour
     protected override void Awake()
     {
         base.Awake();
+        agent = GetComponent<NavMeshAgent>();
+        agent.updateRotation = false;
+        agent.updateUpAxis = false;
+        agent.speed = enemyStats.MovementSpeed;
         rb2d = GetComponent<Rigidbody2D>();   
         GetComponent<BaseCharacter>().OnTakeDamage+=Knockback;
     }
 
     private void FixedUpdate()
     {
-        Vector2 dir= (_playerTransform.position - transform.position).normalized;
-
         if (!_isOnKnockbackState)
         {
-            rb2d.velocity=dir * enemyStats.MovementSpeed;
+            agent.SetDestination(_playerTransform.position);
         }
 
+        Vector2 dir = (transform.position - _playerTransform.position).normalized;
         Vector3 scale= transform.localScale;
-        scale.x= dir.x > 0 ? 1:-1;
+        scale.x= dir.x < 0 ? 1:-1;
         transform.localScale = scale;
     }
 
@@ -55,6 +60,7 @@ public class EnemyMovement : EnemyBehaviour
 
         yield return new WaitForSeconds(enemyStats.KnockbackTime);
         _isOnKnockbackState= false;
+        rb2d.velocity = Vector2.zero;
     }
  
 }

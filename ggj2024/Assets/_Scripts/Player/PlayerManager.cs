@@ -80,7 +80,7 @@ public class PlayerManager : BaseCharacter
         if (PacmanPickUp)
         {
             playerCantAttack = true;
-            spawnerRef.pacmanMode = true;
+            spawnerRef.SetPacmanMode();
             countDown = durationPacmanEffect;
             anim.SetBool("PacmanTime", true);
         }
@@ -111,7 +111,7 @@ public class PlayerManager : BaseCharacter
         if(PacmanPickUp)
         {
             playerCantAttack = false;
-            spawnerRef.pacmanMode = false;
+            spawnerRef.FinishPacManMode();
             anim.SetBool("PacmanTime", false);
         }
 
