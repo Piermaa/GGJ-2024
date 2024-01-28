@@ -20714,6 +20714,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7619685385674866161, guid: 5452388ce8d459f4d9feb2c4be25e226, type: 3}
+      propertyPath: spawnRate
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7619685385674866161, guid: 5452388ce8d459f4d9feb2c4be25e226, type: 3}
       propertyPath: widthLimits.x
       value: -45.9
       objectReference: {fileID: 0}
@@ -20728,6 +20732,10 @@ PrefabInstance:
     - target: {fileID: 7619685385674866161, guid: 5452388ce8d459f4d9feb2c4be25e226, type: 3}
       propertyPath: heightLimits.y
       value: 50.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7619685385674866161, guid: 5452388ce8d459f4d9feb2c4be25e226, type: 3}
+      propertyPath: enemiesPerSpawn
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7619685385674866161, guid: 5452388ce8d459f4d9feb2c4be25e226, type: 3}
       propertyPath: playerTransform
@@ -38692,9 +38700,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: b0374517bf4f47d4abc8b246a9d14536, type: 3}
     - target: {fileID: 3486837852304942862, guid: eca131896eeb57741a3f7fca5c29c6c2, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3486837852304942862, guid: eca131896eeb57741a3f7fca5c29c6c2, type: 3}
       propertyPath: playerShoot
       value: 
       objectReference: {fileID: 1947369219}
+    - target: {fileID: 3486837852304942862, guid: eca131896eeb57741a3f7fca5c29c6c2, type: 3}
+      propertyPath: TimeToUnlock
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 3724959067046883514, guid: eca131896eeb57741a3f7fca5c29c6c2, type: 3}
       propertyPath: m_Type
       value: 0
@@ -38738,6 +38754,10 @@ PrefabInstance:
     - target: {fileID: 5020843412433781548, guid: eca131896eeb57741a3f7fca5c29c6c2, type: 3}
       propertyPath: m_Name
       value: Timer Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 5773444295145233523, guid: eca131896eeb57741a3f7fca5c29c6c2, type: 3}
+      propertyPath: timeBetweenEvents
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6387636057843033905, guid: eca131896eeb57741a3f7fca5c29c6c2, type: 3}
       propertyPath: m_AnchorMax.y
@@ -48745,6 +48765,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1568100710680796049, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: attackCooldown
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 2758035766894549907, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.47
@@ -48881,9 +48905,17 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 532.37463
       objectReference: {fileID: 0}
+    - target: {fileID: 4564147264381985680, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4626860575285513350, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5010635911606313900, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5490499224717304119, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: _dialogues.Array.size

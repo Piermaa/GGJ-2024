@@ -16,6 +16,7 @@ public class AbilityCooldown : MonoBehaviour
 
     [SerializeField] private float maxCD;
     [SerializeField][TextArea] private string onUnlockText;
+
     private void Awake()
     {
         icon.enabled = false;

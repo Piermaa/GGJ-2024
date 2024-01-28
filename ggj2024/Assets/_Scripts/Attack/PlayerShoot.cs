@@ -14,6 +14,7 @@ public class PlayerShoot : MonoBehaviour
     private PlayerManager pjRef;
     private float attackCooldownTimer;
     private bool _canShootRebotin = true;
+
     private void Awake()
     {
         RebotinHit.OnDestroyBullet += ReloadRebotin;
