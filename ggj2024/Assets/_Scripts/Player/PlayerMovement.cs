@@ -58,7 +58,7 @@ public class PlayerMovement : MonoBehaviour
         //else if(hor > 0)
         //    transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
 
-        CheckToFlip(false);
+        _spriteRenderer.flipX = (hor < 0);
 
         if (hor != 0 || ver != 0)
             anim.SetBool("Walk", true);
@@ -96,10 +96,5 @@ public class PlayerMovement : MonoBehaviour
     public void SetStepSounds(string soundsTag)
     {
         currentStepSound = soundsDictionary[soundsTag];
-    }
-
-    public void CheckToFlip(bool attackBehind)
-    {
-        _spriteRenderer.flipX = (hor < 0);
     }
 }
