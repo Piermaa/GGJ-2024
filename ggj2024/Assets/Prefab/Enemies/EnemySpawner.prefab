@@ -52,6 +52,7 @@ MonoBehaviour:
   widthLimits: {x: -45.4, y: 17}
   playerTransform: {fileID: 0}
   enemiesPerSpawn: 3
-  warmUpTime: 0
+  warmUpTime: 15
   spawnRate: 5
   enemyHalfHeight: 120
+  pacmanMode: 0
