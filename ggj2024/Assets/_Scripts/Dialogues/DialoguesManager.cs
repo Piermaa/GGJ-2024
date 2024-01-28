@@ -41,7 +41,10 @@ public class DialoguesManager : MonoBehaviour
 
         foreach (Dialogue dial in _dialogues)
         {
-            _dialoguesDictionary.Add(dial.Tag, dial);
+            if (!_dialoguesDictionary.ContainsKey(dial.Tag))
+            {
+                _dialoguesDictionary.Add(dial.Tag, dial);
+            }
         }
 
         TextWritter.OnDialogueFinish += SetDialogue;
