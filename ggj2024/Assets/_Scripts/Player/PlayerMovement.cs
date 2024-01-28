@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     private Dictionary<string, AudioClip[]> soundsDictionary=new();
     private AudioClip[] currentStepSound;
     private AudioSource _source;
+    private PlayerMeleeAttack meleeAttack;
 
     private Vector3 velocity;
     private float stepsTimer;
@@ -31,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
+        meleeAttack = GetComponentInChildren<PlayerMeleeAttack>();
     }
 
     void Start()
@@ -96,5 +98,10 @@ public class PlayerMovement : MonoBehaviour
     public void SetStepSounds(string soundsTag)
     {
         currentStepSound = soundsDictionary[soundsTag];
+    }
+
+    public void ShowAttack()
+    {
+        meleeAttack.ShowAttack();
     }
 }

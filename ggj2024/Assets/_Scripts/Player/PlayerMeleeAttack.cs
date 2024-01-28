@@ -6,9 +6,9 @@ public class PlayerMeleeAttack : MonoBehaviour
 {
     [SerializeField] int damage;
     [SerializeField] float attackDistance;
-    [SerializeField] GameObject swordSwing;
-    [SerializeField] private AudioClip slashClip; 
-    
+    [SerializeField] private GameObject swordSwing;
+    [SerializeField] private AudioClip slashClip;
+
     private AudioSource source;
     private EnemyCharacter nearEnemy;
     private bool alreadyAttacking = false;
@@ -16,6 +16,8 @@ public class PlayerMeleeAttack : MonoBehaviour
     private Animator anim;
     private PlayerManager pjRef;
 
+
+    private float angle;
 
     // Start is called before the first frame update
     void Start()
@@ -63,7 +65,7 @@ public class PlayerMeleeAttack : MonoBehaviour
 
         Vector3 vectorToTarget = nearEnemy.transform.position - transform.position;
 
-        float angle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg;
+        angle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg;
 
         Quaternion q = Quaternion.AngleAxis(angle, Vector3.forward);
 
@@ -77,8 +79,6 @@ public class PlayerMeleeAttack : MonoBehaviour
                 anim.SetTrigger("Attack");
 
             attackCooldown = 1f;
-            source.PlayOneShot(slashClip);
-            Instantiate(swordSwing, nearEnemy.transform.position + new Vector3(0, 0, -2), Quaternion.Euler(Vector3.forward * angle + new Vector3(0, 0, 77)));
         }
         else
             attackCooldown -= Time.deltaTime;
@@ -100,4 +100,11 @@ public class PlayerMeleeAttack : MonoBehaviour
             alreadyAttacking = false;
         }
     }
+
+    public void ShowAttack()
+    {
+        source.PlayOneShot(slashClip);
+        Instantiate(swordSwing, nearEnemy.transform.position, Quaternion.Euler(Vector3.forward * angle + new Vector3(0, 0, 77)));
+    }
+    
 }
