@@ -15,7 +15,6 @@ public class PlayerMeleeAttack : MonoBehaviour
     private float attackCooldown;
     private Animator anim;
     private PlayerManager pjRef;
-    private PlayerMovement pjMov;
 
 
     // Start is called before the first frame update
@@ -23,7 +22,6 @@ public class PlayerMeleeAttack : MonoBehaviour
     {
         source = GetComponent<AudioSource>();
         pjRef = GetComponentInParent<PlayerManager>();
-        pjMov = GetComponentInParent<PlayerMovement>();
         attackCooldown = 0;
         anim = GetComponentInParent<Animator>();
     }
