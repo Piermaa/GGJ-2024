@@ -48907,7 +48907,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4564147264381985680, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4626860575285513350, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: m_Enabled
@@ -48915,7 +48915,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5010635911606313900, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5490499224717304119, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
       propertyPath: _dialogues.Array.size
@@ -49477,7 +49477,8 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 1168051055
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6786542450475683459, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 7709924307211832747, guid: e97a33753c831304ea68fd7547d9cc8b, type: 3}

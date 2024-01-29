@@ -8,8 +8,8 @@ public class PlayerMeleeAttack : MonoBehaviour
     [SerializeField] float attackDistance;
     [SerializeField] private GameObject swordSwing;
     [SerializeField] private AudioClip slashClip;
+    [SerializeField] private AudioSource source;
 
-    private AudioSource source;
     private EnemyCharacter nearEnemy;
     private bool alreadyAttacking = false;
     private float attackCooldown;
@@ -22,7 +22,7 @@ public class PlayerMeleeAttack : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        source = GetComponent<AudioSource>();
+        source = GetComponentInParent<AudioSource>();
         pjRef = GetComponentInParent<PlayerManager>();
         attackCooldown = 0;
         anim = GetComponentInParent<Animator>();

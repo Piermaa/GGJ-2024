@@ -262,7 +262,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5096218254276074218}
   - component: {fileID: 6353476398604504309}
-  - component: {fileID: 6786542450475683459}
+  - component: {fileID: 6973702154148903542}
   m_Layer: 3
   m_Name: AttackObject
   m_TagString: Untagged
@@ -320,7 +320,7 @@ CapsuleCollider2D:
   m_Offset: {x: 1.15, y: 0}
   m_Size: {x: 1.2, y: 3}
   m_Direction: 0
---- !u!114 &6786542450475683459
+--- !u!114 &6973702154148903542
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -332,10 +332,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd3eef3e27ec2224bbc003532b97a423, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
+  damage: 25
   attackDistance: 5
   swordSwing: {fileID: 8137170320906700535, guid: 452a271267d5b454b96d1114c9ab7000, type: 3}
-  slashClip: {fileID: 0}
+  slashClip: {fileID: 8300000, guid: 3e8a77ea0591db4449d8a210da7b2599, type: 3}
+  source: {fileID: 8011295596932075096}
 --- !u!1 &6732234323180982734
 GameObject:
   m_ObjectHideFlags: 0
