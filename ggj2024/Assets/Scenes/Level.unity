@@ -20715,7 +20715,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7619685385674866161, guid: 5452388ce8d459f4d9feb2c4be25e226, type: 3}
       propertyPath: spawnRate
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7619685385674866161, guid: 5452388ce8d459f4d9feb2c4be25e226, type: 3}
       propertyPath: widthLimits.x
@@ -20735,7 +20735,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7619685385674866161, guid: 5452388ce8d459f4d9feb2c4be25e226, type: 3}
       propertyPath: enemiesPerSpawn
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7619685385674866161, guid: 5452388ce8d459f4d9feb2c4be25e226, type: 3}
       propertyPath: playerTransform
@@ -38709,7 +38709,7 @@ PrefabInstance:
       objectReference: {fileID: 1947369219}
     - target: {fileID: 3486837852304942862, guid: eca131896eeb57741a3f7fca5c29c6c2, type: 3}
       propertyPath: TimeToUnlock
-      value: 15
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 3724959067046883514, guid: eca131896eeb57741a3f7fca5c29c6c2, type: 3}
       propertyPath: m_Type
@@ -38757,7 +38757,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5773444295145233523, guid: eca131896eeb57741a3f7fca5c29c6c2, type: 3}
       propertyPath: timeBetweenEvents
-      value: 15
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 6387636057843033905, guid: eca131896eeb57741a3f7fca5c29c6c2, type: 3}
       propertyPath: m_AnchorMax.y

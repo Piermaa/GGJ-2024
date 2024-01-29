@@ -14,7 +14,7 @@ public class EnemySpawner : MonoBehaviour
     private bool pacmanMode = false;
     private float spawnTimer;
     private Camera mainCamera;
-    //private int difficulty=1;
+    private int difficulty = 1;
 
     [Tooltip("Cada cuantos segs spawnea 1 enemigo")]
     private void Start()
@@ -110,9 +110,9 @@ public class EnemySpawner : MonoBehaviour
 
     private void TimeElapsed(int currentTime)
     {
-        //difficulty++;
-        //spawnRate-=.4f;
-        //enemiesPerSpawn++;
+        difficulty++;
+        spawnRate -= .4f;
+        enemiesPerSpawn++;
     }
 
     public void SpawnBurst(GameObject newEnemy, int amount)

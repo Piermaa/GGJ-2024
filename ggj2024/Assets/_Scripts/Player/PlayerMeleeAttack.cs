@@ -104,7 +104,7 @@ public class PlayerMeleeAttack : MonoBehaviour
     public void ShowAttack()
     {
         source.PlayOneShot(slashClip);
-        Instantiate(swordSwing, nearEnemy.transform.position, Quaternion.Euler(Vector3.forward * angle + new Vector3(0, 0, 77)));
+        Instantiate(swordSwing, nearEnemy.transform.position + new Vector3(0,0,-0.5f), Quaternion.Euler(Vector3.forward * angle + new Vector3(0, 0, 77)));
     }
     
 }

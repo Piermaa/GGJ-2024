@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
-  damage: 25
+  damage: 15
   lifeTime: 5
   shootSound: {fileID: 8300000, guid: a3196b88f90f339468ee324f72141767, type: 3}
 --- !u!95 &3943356947453748099
